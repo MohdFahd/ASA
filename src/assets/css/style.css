@@ -3763,6 +3763,11 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\#302F2A\] {
+  --tw-text-opacity: 1;
+  color: rgb(48 47 42 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
