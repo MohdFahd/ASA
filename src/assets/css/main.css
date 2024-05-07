@@ -1,0 +1,302 @@
+@font-face {
+  font-family: "TheSans-bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/TheSans-Bold.otf") format("opentype");
+  /* Corrected format */
+}
+
+@font-face {
+  font-family: "TheSans-light";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/The-Sans-Plain.otf") format("opentype");
+  /* Corrected format */
+}
+
+body {
+  font-family: "TheSans-light";
+  direction: rtl;
+}
+
+.TheSans-bold {
+  font-family: "TheSans-bold" !important;
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  margin: 2px 0;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #f0b624;
+}
+
+.active-mobile::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background-color: #f0b624;
+  position: absolute;
+  border-radius: 10px 0px;
+  bottom: -5px;
+  right: 0;
+}
+input:focus,
+textarea:focus {
+  border: #13120c;
+  outline-color: #13120c;
+}
+.search-tag:hover {
+  background: #13120c;
+  color: #fff;
+}
+.active {
+  background-color: #f0b624;
+  padding: 8px 24px;
+  border-radius: 12px;
+  color: #fff;
+}
+.search-tag:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7454%)
+    hue-rotate(221deg) brightness(103%) contrast(102%);
+}
+
+.banner-arrow:hover {
+  background: #13120c;
+}
+.banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+.card {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-animation {
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+}
+
+.card-animation h2,
+.card-animation img,
+.card-animation div {
+  z-index: 1;
+  color: black;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-animation::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  inset: 5px;
+  border-radius: 15px;
+}
+.card-animation:hover:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-color: #f0b624;
+  height: 130%;
+  transition: all 0.2s linear;
+  background-color: #13120c;
+  animation: rotBGimg 3.5s linear infinite;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 274px;
+  height: 274px;
+  perspective: 1000px;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-back {
+  width: 270px;
+  height: 310px;
+  transform: rotateY(180deg);
+}
+/* tooltip settings 👇 */
+
+.copy {
+  /* button */
+  --button-bg: #353434;
+  --button-hover-bg: #464646;
+  --button-text-color: #cccccc;
+  --button-hover-text-color: #8bb9fe;
+  --button-border-radius: 10px;
+  --button-diameter: 36px;
+  --button-outline-width: 1px;
+  --button-outline-color: rgb(141, 141, 141);
+  /* tooltip */
+  --tooltip-bg: #f4f3f3;
+  --toolptip-border-radius: 4px;
+  --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+  --tooltip-font-size: 12px;
+  /* 👆 this field should not be empty */
+  --tootip-text-color: rgb(50, 50, 50);
+  --tooltip-padding-x: 7px;
+  --tooltip-padding-y: 7px;
+  --tooltip-offset: 8px;
+  /* --tooltip-transition-duration: 0.3s; */
+  /* 👆 if you need a transition, 
+  just remove the comment,
+  but I didn't like the transition :| */
+}
+.copy {
+  box-sizing: border-box;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border-radius: var(--button-border-radius);
+  background-color: transparent;
+  color: #13120c;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+.copy svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkmark {
+  display: none;
+}
+
+/* actions */
+
+.copy:hover .tooltip,
+.copy:focus:not(:focus-visible) .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy:focus:not(:focus-visible) .tooltip::before {
+  content: attr(data-text-end);
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+  display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+  display: block;
+}
+
+.copy:hover,
+.copy:focus {
+  outline: none;
+  border: none;
+}
+.rect {
+  margin-top: 30px;
+  position: absolute;
+  bottom: 100px;
+  margin: 0px !important;
+  padding: 0;
+  width: 200px;
+  height: 120px;
+  background-color: #78787c4d;
+
+  transform: translate(-40%, -40%);
+  pointer-events: none;
+
+  opacity: 1;
+}
+
+.zoom {
+  opacity: 0;
+  top: 10px;
+  border-radius: 30px;
+}
+
+.rect-active {
+  opacity: 1;
+}
+
+.sendbtn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.sendbtn img {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sendbtn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.sendbtn:hover img {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.sendbtn:hover span {
+  transform: translateX(5em);
+}
+
+.sendbtn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
