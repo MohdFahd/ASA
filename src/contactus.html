@@ -1,611 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Meta Tags -->
-    <title>ASA | عالم الشاشات والقطع</title>
-    <meta name="description" content="" />
-    <meta name="robots" content="index,follow" />
-    <meta name="canonical" href="" />
-    <meta name="googlebot" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="ASA" />
-    <link rel="icon" href="./assets/imgs/logo.ico" type="image/x-icon" />
-    <link rel="manifest" href="" />
-    <meta name="msapplication-TileColor" content="#2c2b7c" />
-    <meta name="msapplication-TileImage" content="" />
-    <meta name="theme-color" content="#fff" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta property="fb:app_id" content="" />
-    <meta property="og:locale" content="ar_AR" />
-    <meta property="article:author" content="" />
-    <meta property="article:section" content="" />
-    <meta property="fb:pages" content="" />
 
-    <meta name="twitter:card" content="" />
-    <meta name="twitter:site" content="" />
-    <meta name="twitter:title" content=" " />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:creator" content="" />
-    <meta name="twitter:image:src" content="" />
-    <meta name="twitter:image:alt" content="" />
-    <meta name="twitter:domain" content="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Meta Tags -->
+  <title>ASA | عالم الشاشات والقطع</title>
+  <meta name="description" content="" />
+  <meta name="robots" content="index,follow" />
+  <meta name="canonical" href="" />
+  <meta name="googlebot" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="ASA" />
+  <link rel="icon" href="./assets/imgs/logo.ico" type="image/x-icon" />
+  <link rel="manifest" href="" />
+  <meta name="msapplication-TileColor" content="#2c2b7c" />
+  <meta name="msapplication-TileImage" content="" />
+  <meta name="theme-color" content="#fff" />
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:alt" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta property="fb:app_id" content="" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="article:author" content="" />
+  <meta property="article:section" content="" />
+  <meta property="fb:pages" content="" />
 
-    <!-- styles link -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="./assets/js/alpine.js"></script>
-  </head>
+  <meta name="twitter:card" content="" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:title" content=" " />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:creator" content="" />
+  <meta name="twitter:image:src" content="" />
+  <meta name="twitter:image:alt" content="" />
+  <meta name="twitter:domain" content="" />
 
-  <body
-    class="bg-[#FEFEFE]"
-    x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }"
-  >
-    <header class="relative z-50">
-      <nav class="bg-white drop-shadow-md">
-        <div class="flex flex-col">
-          <div
-            class="container mx-auto md:flex md:justify-between py-5 hidden px-10"
-          >
-            <a href="./index.html" aria-label="ASA Logo">
-              <img src="./assets/imgs/logo.svg" class="" title="" alt="" />
-            </a>
-            <div class="mt-[26px] relative cursor-pointer">
-              <input
-                type="text"
-                class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px] focus:outline-none"
-                placeholder="البحث"
-              />
-              <div
-                class="bg-secondary rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1"
-              >
-                <img src="./assets/icons/search.svg" title="" alt="" />
-              </div>
+  <!-- styles link -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="./assets/js/alpine.js"></script>
+</head>
+
+<body class="bg-[#FEFEFE]" x-data="{ toggleNew: false,  toggleMostSales: false,toggleOffers: false, }">
+  <header class="relative z-50">
+    <nav class="bg-white drop-shadow-md">
+      <div class="flex flex-col">
+        <div class="container mx-auto md:flex md:justify-between py-5 hidden px-10">
+          <a href="./index.html" aria-label="ASA Logo">
+            <img src="./assets/imgs/logo.svg" class="" title="" alt="" />
+          </a>
+          <div class="mt-[26px] relative cursor-pointer">
+            <input type="text" class="bg-[#F2F4F4] min-w-[400px] px-3 rounded-3xl text-base h-[50px] focus:outline-none"
+              placeholder="البحث" />
+            <div
+              class="bg-secondary rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1">
+              <img src="./assets/icons/search.svg" title="" alt="" />
             </div>
           </div>
-          <div class="flex justify-center max-md:hidden">
-            <div
-              class="bg-gradient-to-r from-secondary to-primary w-[730px] h-[90px] rounded-2xl"
-            ></div>
-          </div>
-          <div class="justify-center py-5 hidden md:flex">
-            <ul class="flex justify-end items-center">
-              <li
-                class="active text-xl px-4 mx-2 hover:bg-secondary hover:text-white text-[#AAAAAA]"
-              >
-                <a href="index.html">المتجر</a>
-              </li>
-              <li
-                class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
-                @click="
+        </div>
+        <div class="flex justify-center max-md:hidden">
+          <div class="bg-gradient-to-r from-secondary to-primary w-[730px] h-[90px] rounded-2xl"></div>
+        </div>
+        <div class="justify-center py-5 hidden md:flex">
+          <ul class="flex justify-end items-center">
+            <li class="active text-xl px-4 mx-2 hover:bg-secondary hover:text-white text-[#AAAAAA]">
+              <a href="index.html">المتجر</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] relative mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
                 toggleNew = !toggleNew;
                 toggleOffers = false;
-                toggleMostSales = false; "
-              >
-                <span
-                  class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0"
-                  >1</span
-                >
-                <a href="#">جديد</a>
-              </li>
-              <li
-                class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
-                @click="
+                toggleMostSales = false; ">
+              <span
+                class="rounded-full bg-red-500 absolute text-sm w-5 h-5 text-white text-center left-2 top-0">1</span>
+              <a href="#">جديد</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
                 toggleMostSales = !toggleMostSales;
                   toggleNew = false;
                   toggleOffers = false;
-              "
-              >
-                <a href="#">الأكثر مبيعاً</a>
-              </li>
-              <li
-                class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
-                @click="
+              ">
+              <a href="#">الأكثر مبيعاً</a>
+            </li>
+            <li
+              class="text-xl text-[#AAAAAA] mx-2 hover:bg-secondary hover:text-white cursor-pointer py-2 px-7 hover:rounded-xl"
+              @click="
                 toggleOffers = !toggleOffers;
                 toggleNew = false;
                   toggleMostSales = false;
-              "
-              >
-                <a href="#">عروض</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- Mobile SideBar -->
-      <nav class="flex md:hidden bg-white flex-col z-0 justify-center">
-        <div class="container md:hidden flex justify-center items-center my-3">
-          <img
-            src="./assets/imgs/logo.svg"
-            class="mx-2"
-            width="90px"
-            title=""
-            alt=""
-          />
-        </div>
-        <div class="flex justify-center items-center flex-col mx-10">
-          <!-- Mobile Search -->
-          <div
-            class="flex items-center justify-center relative md:hidden my-3 border-none bg-[#F2F4F4] p-3 rounded-xl w-full"
-          >
-            <input
-              type="text"
-              class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
-              placeholder="البحث"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              class="w-5 h-5 opacity-70"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div
-            class="bg-white text-center flex sm:justify-center max-sm:justify-between items-center w-full"
-          >
-            <a
-              href="index.html"
-              class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative active"
-            >
-              المتجر
-            </a>
-            <button
-              @click="
-                  toggleNew = !toggleNew;
-                  toggleOffers = false;
-                  toggleMostSales = false; "
-              class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative"
-            >
-              جديد
-
-              <span
-                class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
-                >1</span
-              >
-            </button>
-            <button
-              @click="
-                toggleMostSales = !toggleMostSales;
-                    toggleNew = false;
-                    toggleOffers = false; "
-              class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative"
-            >
-              الأكثر مبيعاً
-            </button>
-            <button
-              @click="
-                  toggleOffers = !toggleOffers;
-                  toggleNew = false;
-                    toggleMostSales = false;"
-              class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative"
-            >
-              عروض
-            </button>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- list of links -->
-    <ul class="navlist -z-40">
-      <li
-        x-show="toggleNew"
-        x-show="toggle"
-        x-transition:enter="transition ease-in-out duration-500"
-        x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
-        x-bind:class="{ 'translate-y-0': toggleNew, '-translate-y-32': !toggleNew }"
-        class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300 z-[-100]"
-      >
-        <a
-          href="newes.html"
-          class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-secondary"
-        >
-          شاشات
-          <span
-            class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2"
-            >1</span
-          >
-        </a>
-        <div class="border-l-2 border-secondary"></div>
-        <a
-          href="newes.html"
-          class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]"
-        >
-          قطع</a
-        >
-      </li>
-      <li
-        x-show="toggleMostSales"
-        x-show="toggle"
-        x-transition:enter="transition ease-in-out duration-500"
-        x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
-        class="container text-center bg-white w-[90%] md:shadow-md md:rounded-xl z-0 p-5 max-md:p-3 max-md:mt-2 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300"
-      >
-        <a
-          href="Trend.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-        >
-          شاشات
-        </a>
-        <div class="border-l-2 border-[#AAAAAA]"></div>
-        <a
-          href="Trend.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-        >
-          قطع غيار
-        </a>
-        <div class="border-l-2 border-[#AAAAAA]"></div>
-        <a
-          href="Trend.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-        >
-          أدوات صيانة
-        </a>
-      </li>
-      <li
-        x-show="toggleOffers"
-        x-show="toggle"
-        x-transition:enter="transition ease-in-out duration-500"
-        x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
-        class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300"
-      >
-        <a
-          href="offers.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-        >
-          شاشات
-        </a>
-        <div class="border-l-2 border-[#AAAAAA]"></div>
-        <a
-          href="offers.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-        >
-          قطع غيار
-        </a>
-        <div class="border-l-2 border-[#AAAAAA]"></div>
-
-        <a
-          href="Trend.html"
-          class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1"
-        >
-          أدوات صيانة
-        </a>
-      </li>
-    </ul>
-    <!-- banner -->
-    <div class="md:flex justify-center bg-primary max-md:mt-5">
-      <div class="grid grid-cols-12 container mx-auto px-10">
-        <div class="col-span-4">
-          <img src="./assets/imgs/contactus.svg" alt="" />
-        </div>
-        <div
-          class="text-3xl font-bold text-white col-span-8 flex flex-col justify-center items-start max-md:text-base max-sm:text-sm"
-        >
-          <h1>اتصل بنا</h1>
-          <p>وبقى على تواصل ليصلك كل جديد</p>
+              ">
+              <a href="#">عروض</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <main class="container mx-auto px-10 my-8">
-      <!-- Contact Us -->
-      <section class="my-5">
-        <p class="text-2xl w-[50%] leading-9 my-3 max-md:text-lg max-md:w-full">
-          يُرجى استخدام نموذج الاتصال أدناه للتواصل معنا وسنعاود الاتصال
-          بك.نتطلع قدماً إلى التواصل معكم!
-        </p>
+    </nav>
+    <!-- Mobile SideBar -->
+    <nav class="flex md:hidden bg-white flex-col z-0 justify-center">
+      <div class="container md:hidden flex justify-center items-center my-3">
+        <img src="./assets/imgs/logo.svg" class="mx-2" width="90px" title="" alt="" />
+      </div>
+      <div class="flex justify-center items-center flex-col mx-5">
+        <!-- Mobile Search -->
         <div
-          class="grid grid-cols-12 my-5 gap-4 max-md:grid-cols-1 max-md:grid-rows-2"
-        >
-          <div class="col-span-4 flex flex-col max-md:row-span-2">
-            <div class="flex items-center my-3">
-              <img
-                src="./assets/icons/locationPin.svg"
-                class="me-1 self-start"
-                alt=""
-              />
-              <span class="font-bold"
-                >صنعاء - شارع القصر جوار البوابة الجنوبية
-              </span>
-            </div>
-            <div class="flex items-center my-3">
-              <img
-                src="./assets/icons/smartphone.svg"
-                class="me-1 self-start"
-                alt=""
-              />
-              <span class="font-bold">7769777747 </span>
-            </div>
-            <div class="flex items-center my-3">
-              <img
-                src="./assets/icons/email.svg"
-                class="me-1 self-start"
-                alt=""
-              />
-              <span class="font-bold">admin@alsaifiasa.com </span>
-            </div>
-            <div class="flex items-center my-3">
-              <img
-                src="./assets/icons/global.svg"
-                class="me-1 self-start"
-                alt=""
-              />
-              <span class="font-bold">www.alsaifiasa.com </span>
-            </div>
-          </div>
-          <div
-            class="col-span-8 max-[1024px]:col-span-12 flex bg-[#F9F9F9] rounded-2xl p-7"
-          >
-            <form action="" method="post" class="w-full grid gap-2">
-              <div class="flex flex-col col-span-12 my-2">
-                <label for="" class="text-primary">
-                  يرجى اختيار نوع الاستفسار الخاص بك:
-                </label>
-                <select
-                  name=""
-                  id=""
-                  class="rounded-lg py-2 mt-2 px-2 bg-white"
-                >
-                  <option value="">المبيعات</option>
-                  <option value="">المبيعات</option>
-                  <option value="">المبيعات</option>
-                </select>
-              </div>
-              <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-                <label for="" class="text-primary"> الاسم الاول </label>
-                <input
-                  type="text"
-                  class="rounded-lg py-2 mt-2 px-2 bg-white"
-                  name=""
-                  id=""
-                  placeholder="ضع اسمك الأول"
-                  required
-                />
-              </div>
-              <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-                <label for="" class="text-primary">الاسم الاخير </label>
-                <input
-                  type="text"
-                  class="rounded-lg py-2 mt-2 px-2 bg-white"
-                  name=""
-                  id=""
-                  required
-                  placeholder="ضع اسمك الأخير"
-                />
-              </div>
-              <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
-                <label for="" class="text-primary">البريد الإلكتروني </label>
-                <input
-                  type="email"
-                  class="rounded-lg py-2 mt-2 px-2 bg-white"
-                  name=""
-                  id=""
-                  required
-                  placeholder="example@gmail.com"
-                />
-              </div>
-              <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
-                <label for="" class="text-primary"> الهاتف </label>
-                <input
-                  type="number"
-                  class="rounded-lg py-2 px-2 bg-white"
-                  name=""
-                  id=""
-                  pattern="[0-9]{9}"
-                  minlength="9"
-                  maxlength="9"
-                  placeholder="770000000"
-                  required
-                />
-              </div>
-              <div class="flex flex-col my-3 col-span-12">
-                <label for="" class="text-primary">الرسالة</label>
-                <textarea
-                  name=""
-                  id=""
-                  rows="5"
-                  class="rounded-lg py-2 px-2 bg-white mt-1"
-                ></textarea>
-              </div>
+          class="flex items-center justify-center relative md:hidden my-3 border-none bg-[#F2F4F4] p-3 rounded-xl w-full">
+          <input type="text"
+            class="grow focus:outline-none focus:border-none active:outline-none active:border-none bg-transparent"
+            placeholder="البحث" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-5 h-5 opacity-70">
+            <path fill-rule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="bg-white text-center flex sm:justify-center max-sm:justify-between items-center w-full">
+          <a href="index.html" class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative active">
+            المتجر
+          </a>
+          <button @click="
+                  toggleNew = !toggleNew;
+                  toggleOffers = false;
+                  toggleMostSales = false; " class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative">
+            جديد
 
-              <!-- <button
+            <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
+          </button>
+          <button @click="
+                toggleMostSales = !toggleMostSales;
+                    toggleNew = false;
+                    toggleOffers = false; " class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative">
+            الأكثر مبيعاً
+          </button>
+          <button @click="
+                  toggleOffers = !toggleOffers;
+                  toggleNew = false;
+                    toggleMostSales = false;" class="text-secondary flex cursor-pointer rounded-lg sm:ml-5 relative">
+            عروض
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- list of links -->
+  <ul class="navlist -z-40">
+    <li x-show="toggleNew" x-show="toggle" x-transition:enter="transition ease-in-out duration-500"
+      x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
+      x-bind:class="{ 'translate-y-0': toggleNew, '-translate-y-32': !toggleNew }"
+      class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300 z-[-100]">
+      <a href="newes.html"
+        class="text-base md:text-xl px-3 flex cursor-pointer rounded-lg mx-1 py-1 font-bold relative active-mobile text-secondary">
+        شاشات
+        <span class="rounded-full bg-red-500 text-sm w-5 h-5 text-white text-center left-2 top-0 ms-2">1</span>
+      </a>
+      <div class="border-l-2 border-secondary"></div>
+      <a href="newes.html"
+        class="text-base md:text-xl font-bold px-4 flex cursor-pointer rounded-lg mx-1 py-1 text-[#AAAAAA]">
+        قطع</a>
+    </li>
+    <li x-show="toggleMostSales" x-show="toggle" x-transition:enter="transition ease-in-out duration-500"
+      x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
+      class="container text-center bg-white w-[90%] md:shadow-md md:rounded-xl z-0 p-5 max-md:p-3 max-md:mt-2 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+      <a href="Trend.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        شاشات
+      </a>
+      <div class="border-l-2 border-[#AAAAAA]"></div>
+      <a href="Trend.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        قطع غيار
+      </a>
+      <div class="border-l-2 border-[#AAAAAA]"></div>
+      <a href="Trend.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        أدوات صيانة
+      </a>
+    </li>
+    <li x-show="toggleOffers" x-show="toggle" x-transition:enter="transition ease-in-out duration-500"
+      x-transition:enter-start="opacity-0  transform translate-y-[-150%]"
+      class="container bg-white w-[90%] text-center p-5 max-md:p-3 max-md:mt-2 md:shadow-md md:rounded-xl z-0 flex justify-center transition ease-in-out delay-150 max-md:border-t-4 border-gray-300">
+      <a href="offers.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        شاشات
+      </a>
+      <div class="border-l-2 border-[#AAAAAA]"></div>
+      <a href="offers.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        قطع غيار
+      </a>
+      <div class="border-l-2 border-[#AAAAAA]"></div>
+
+      <a href="Trend.html"
+        class="text-base md:text-xl font-bold text-[#AAAAAA] px-4 flex cursor-pointer rounded-lg mx-1 py-1">
+        أدوات صيانة
+      </a>
+    </li>
+  </ul>
+  <!-- banner -->
+  <div class="md:flex justify-center bg-primary max-md:mt-5">
+    <div class="grid grid-cols-12 container mx-auto px-10">
+      <div class="col-span-4">
+        <img src="./assets/imgs/contactus.svg" alt="" />
+      </div>
+      <div
+        class="text-3xl font-bold text-white col-span-8 flex flex-col justify-center items-start max-md:text-base max-sm:text-sm">
+        <h1>اتصل بنا</h1>
+        <p>وبقى على تواصل ليصلك كل جديد</p>
+      </div>
+    </div>
+  </div>
+  <main class="container mx-auto px-10 my-8">
+    <!-- Contact Us -->
+    <section class="my-5">
+      <p class="text-2xl w-[50%] leading-9 my-3 max-md:text-lg max-md:w-full">
+        يُرجى استخدام نموذج الاتصال أدناه للتواصل معنا وسنعاود الاتصال
+        بك.نتطلع قدماً إلى التواصل معكم!
+      </p>
+      <div class="grid grid-cols-12 my-5 gap-4 max-md:grid-cols-1 max-md:grid-rows-2">
+        <div class="col-span-4 flex flex-col max-md:row-span-2">
+          <div class="flex items-center my-3">
+            <img src="./assets/icons/locationPin.svg" class="me-1 self-start" alt="" />
+            <span class="font-bold">صنعاء - شارع القصر جوار البوابة الجنوبية
+            </span>
+          </div>
+          <div class="flex items-center my-3">
+            <img src="./assets/icons/smartphone.svg" class="me-1 self-start" alt="" />
+            <span class="font-bold">7769777747 </span>
+          </div>
+          <div class="flex items-center my-3">
+            <img src="./assets/icons/email.svg" class="me-1 self-start" alt="" />
+            <span class="font-bold">admin@alsaifiasa.com </span>
+          </div>
+          <div class="flex items-center my-3">
+            <img src="./assets/icons/global.svg" class="me-1 self-start" alt="" />
+            <span class="font-bold">www.alsaifiasa.com </span>
+          </div>
+        </div>
+        <div class="col-span-8 max-[1024px]:col-span-12 flex bg-[#F9F9F9] rounded-2xl p-7">
+          <form action="" method="post" class="w-full grid gap-2">
+            <div class="flex flex-col col-span-12 my-2">
+              <label for="" class="text-primary">
+                يرجى اختيار نوع الاستفسار الخاص بك:
+              </label>
+              <select name="" id="" class="rounded-lg py-2 mt-2 px-2 bg-white">
+                <option value="">المبيعات</option>
+                <option value="">المبيعات</option>
+                <option value="">المبيعات</option>
+              </select>
+            </div>
+            <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+              <label for="" class="text-primary"> الاسم الاول </label>
+              <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" placeholder="ضع اسمك الأول"
+                required />
+            </div>
+            <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+              <label for="" class="text-primary">الاسم الاخير </label>
+              <input type="text" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
+                placeholder="ضع اسمك الأخير" />
+            </div>
+            <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+              <label for="" class="text-primary">البريد الإلكتروني </label>
+              <input type="email" class="rounded-lg py-2 mt-2 px-2 bg-white" name="" id="" required
+                placeholder="example@gmail.com" />
+            </div>
+            <div class="flex flex-col my-3 col-span-6 max-md:col-span-12">
+              <label for="" class="text-primary"> الهاتف </label>
+              <input type="number" class="rounded-lg py-2 px-2 bg-white" name="" id="" pattern="[0-9]{9}" minlength="9"
+                maxlength="9" placeholder="770000000" required />
+            </div>
+            <div class="flex flex-col my-3 col-span-12">
+              <label for="" class="text-primary">الرسالة</label>
+              <textarea name="" id="" rows="5" class="rounded-lg py-2 px-2 bg-white mt-1"></textarea>
+            </div>
+
+            <!-- <button
               class="btn bg-secondary text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn hover:text-primary ">
               إرسال
               <img src="./assets/icons/send.svg" alt="" />
             </button> -->
-              <button
-                class="btn bg-secondary text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn overflow-hidden max-md:hover:text-primary"
-              >
-                <span>إرسال </span>
-                <div class="svg-wrapper-1">
-                  <div class="svg-wrapper">
-                    <img src="./assets/icons/send.svg" alt="" />
-                  </div>
+            <button
+              class="btn bg-secondary text-[#FFFFFF] font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn overflow-hidden max-md:hover:text-primary">
+              <span>إرسال </span>
+              <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
+                  <img src="./assets/icons/send.svg" alt="" />
                 </div>
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-primary relative">
-      <img
-        src="./assets/icons/ASA.svg"
-        class="absolute top-0 right-0 max-md:hidden"
-        alt=""
-      />
-
-      <div class="container">
-        <div
-          class="flex flex-row md:justify-between max-[1023px]:justify-center max-[1023px]:flex-col max-[1023px]:items-center footer p-10 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
-        >
-          <nav class="max-[1023px]:w-full">
-            <a class="link link-hover text-lg font-bold mt-4" href="index.html"
-              >الرئيسية</a
-            >
-            <a class="link link-hover text-lg font-bold mt-4" href="offers.html"
-              >العروض</a
-            >
-            <a class="link link-hover text-lg font-bold mt-4" href="Trend.html"
-              >الأكثر مبيعاً</a
-            >
-            <a
-              class="link link-hover text-lg font-bold mt-4"
-              href="contactus.html"
-              >تواصل معنا</a
-            >
-          </nav>
-          <div class="grid grid-flow-row gap-11 max-md:w-full">
-            <nav
-              class="self-start max-md:self-center justify-self-center max-md:w-full"
-            >
-              <h3
-                class="font-bold text-lg text-center max-md:text-xl max-sm:text-lg"
-              >
-                كُن أول من يعلم ليصلك كل جديد اولاً بأول
-              </h3>
-              <div
-                x-data="{ isInputFocused: false }"
-                class="grid grid-cols-6 gap-3 my-3"
-              >
-                <input
-                  type="text"
-                  placeholder="البريد الالكتروني"
-                  x-on:focus="isInputFocused = true"
-                  x-on:blur="isInputFocused = false"
-                  class="p-4 rounded-[10px] col-span-4 text-black focus:outline-none"
-                />
-                <button
-                  class="btn p-4 rounded-[10px] col-span-2 bg-secondary text-[#FFFFFF] font-bold border-none hover:bg-primary"
-                  :class="{ 'bg-[#888A8A]': isInputFocused, 'bg-secondary': !isInputFocused }"
-                  x-text="isInputFocused ? 'اشتراك' : 'اشتراك'"
-                  x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }"
-                  x-on:click="isInputFocused = false"
-                ></button>
               </div>
-            </nav>
-            <nav class="self-end justify-self-center">
-              <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
-              <div class="flex">
-                <img
-                  src="./assets/icons/line.svg"
-                  class="max-md:hidden"
-                  title=""
-                  alt=""
-                />
-                <a href="" class="cursor-pointer mx-2">
-                  <img
-                    src="./assets/icons/facebook.svg"
-                    aria-label="facebook account"
-                    title="facebook"
-                    alt=""
-                  />
-                </a>
-                <a href="" class="cursor-pointer mx-2">
-                  <img
-                    src="./assets/icons/Instegram.svg"
-                    aria-label="Instegram account"
-                    title="Instegram"
-                    alt=""
-                  />
-                </a>
-                <a href="" class="cursor-pointer mx-2">
-                  <img
-                    src="./assets/icons/x.svg"
-                    aria-label="x account"
-                    title="x"
-                    alt=""
-                  />
-                </a>
-                <a href="" class="cursor-pointer mx-2">
-                  <img
-                    src="./assets/icons/youtube.svg"
-                    aria-label="youtube account"
-                    title="youtube"
-                    alt=""
-                  />
-                </a>
-
-                <img
-                  src="./assets/icons/line.svg"
-                  class="rotate-180 max-md:hidden"
-                  title=""
-                  alt=""
-                />
-              </div>
-            </nav>
-          </div>
-
-          <nav
-            class="mt-4 flex flex-col justify-center items-center max-md:w-full"
-          >
-            <a
-              href=""
-              title=""
-              target=""
-              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary"
-            >
-              <img
-                src="./assets/icons/Apple.svg"
-                class="me-3 px-2"
-                title=""
-                alt=""
-              />
-              <h2>App store</h2>
-            </a>
-            <a
-              href=""
-              title=""
-              target=""
-              class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary"
-            >
-              <img
-                src="./assets/icons/android.svg"
-                class="me-3"
-                title=""
-                alt=""
-              />
-              <h2>Google Play</h2>
-            </a>
-          </nav>
-        </div>
-        <div
-          class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white"
-        >
-          <nav
-            class="md:place-self-center md:justify-self-start"
-            x-data="{ currentYear: new Date().getFullYear() }"
-          >
-            <div
-              class="grid grid-flow-col gap-2 text-base max-sm:flex max-sm:text-sm"
-            >
-              جميع الحقوق محفوظة &copy;
-              <span x-text="currentYear"></span> مجموعة السيفي
-            </div>
-            <div class="grid grid-flow-col gap-2 text-base max-sm:text-sm">
-              صمم بحب 💙 في بلاتفورم | Platform
-            </div>
-          </nav>
-          <nav class="md:place-self-center md:justify-self-end max-sm:hidden">
-            <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
-          </nav>
+            </button>
+          </form>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <!-- alpine.js -->
-    <script src="./assets/js/alpine.js"></script>
-  </body>
+  <footer class="bg-primary relative">
+    <img src="./assets/icons/ASA.svg" class="absolute top-0 right-0 max-md:hidden" alt="" />
+
+    <div class="container">
+      <div
+        class="flex flex-row md:justify-between max-[1023px]:justify-center max-[1023px]:flex-col max-[1023px]:items-center footer p-10 max-md:p-5 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white">
+        <nav class="max-[1023px]:w-full">
+          <a class="link link-hover text-lg font-bold mt-4" href="index.html">الرئيسية</a>
+          <a class="link link-hover text-lg font-bold mt-4" href="offers.html">العروض</a>
+          <a class="link link-hover text-lg font-bold mt-4" href="Trend.html">الأكثر مبيعاً</a>
+          <a class="link link-hover text-lg font-bold mt-4" href="contactus.html">تواصل معنا</a>
+        </nav>
+        <div class="grid grid-flow-row gap-11 max-md:w-full">
+          <nav class="self-start max-md:self-center justify-self-center max-md:w-full">
+            <h3 class="font-bold text-lg text-center max-md:text-xl max-sm:text-lg">
+              كُن أول من يعلم ليصلك كل جديد اولاً بأول
+            </h3>
+            <div x-data="{ isInputFocused: false }" class="grid grid-cols-6 gap-3 my-3">
+              <input type="text" placeholder="البريد الالكتروني" x-on:focus="isInputFocused = true"
+                x-on:blur="isInputFocused = false"
+                class="p-4 rounded-[10px] col-span-4 text-black focus:outline-none" />
+              <button
+                class="btn p-4 rounded-[10px] col-span-2 bg-secondary text-[#FFFFFF] font-bold border-none hover:bg-primary"
+                :class="{ 'bg-[#888A8A]': isInputFocused, 'bg-secondary': !isInputFocused }"
+                x-text="isInputFocused ? 'اشتراك' : 'اشتراك'" x-bind:style="{ color: isInputFocused ? '#fff' : '#fff' }"
+                x-on:click="isInputFocused = false"></button>
+            </div>
+          </nav>
+          <nav class="self-end justify-self-center">
+            <!-- <h6 class="font-bold text-xl">مواقع التواصل الإجتماعي</h6> -->
+            <div class="flex">
+              <img src="./assets/icons/line.svg" class="max-md:hidden" title="" alt="" />
+              <a href="" class="cursor-pointer mx-2">
+                <img src="./assets/icons/facebook.svg" aria-label="facebook account" title="facebook" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-2">
+                <img src="./assets/icons/Instegram.svg" aria-label="Instegram account" title="Instegram" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-2">
+                <img src="./assets/icons/x.svg" aria-label="x account" title="x" alt="" />
+              </a>
+              <a href="" class="cursor-pointer mx-2">
+                <img src="./assets/icons/youtube.svg" aria-label="youtube account" title="youtube" alt="" />
+              </a>
+
+              <img src="./assets/icons/line.svg" class="rotate-180 max-md:hidden" title="" alt="" />
+            </div>
+          </nav>
+        </div>
+
+        <nav class="mt-4 flex flex-col justify-center items-center max-md:w-full">
+          <a href="" title="" target=""
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
+            <img src="./assets/icons/Apple.svg" class="me-3 px-2" title="" alt="" />
+            <h2>App store</h2>
+          </a>
+          <a href="" title="" target=""
+            class="flex border-2 justify-center border-white border-solid px-12 py-3 my-2 rounded-2xl cursor-pointer hover:bg-secondary">
+            <img src="./assets/icons/android.svg" class="me-3" title="" alt="" />
+            <h2>Google Play</h2>
+          </a>
+        </nav>
+      </div>
+      <div class="footer px-10 py-4 border-t bg-base-200 border-base-300 bg-transparent text-white">
+        <nav class="md:place-self-center md:justify-self-start" x-data="{ currentYear: new Date().getFullYear() }">
+          <div class="grid grid-flow-col gap-2 text-base max-sm:flex max-sm:text-sm">
+            جميع الحقوق محفوظة &copy;
+            <span x-text="currentYear"></span> مجموعة السيفي
+          </div>
+          <div class="grid grid-flow-col gap-2 text-base max-sm:text-sm">
+            صمم بحب 💙 في بلاتفورم | Platform
+          </div>
+        </nav>
+        <nav class="md:place-self-center md:justify-self-end max-sm:hidden">
+          <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- alpine.js -->
+  <script src="./assets/js/alpine.js"></script>
+</body>
+
 </html>
