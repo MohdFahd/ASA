@@ -2987,6 +2987,11 @@ details.collapse summary::-webkit-details-marker {
   margin-bottom: 2rem;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -4138,6 +4143,11 @@ details.collapse summary::-webkit-details-marker {
     padding: 1.25rem;
   }
 
+  .max-md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .max-md\:text-center {
     text-align: center;
   }
@@ -4344,6 +4354,11 @@ details.collapse summary::-webkit-details-marker {
   .md\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:text-2xl {
