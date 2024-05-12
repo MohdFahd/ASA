@@ -3452,14 +3452,14 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-\[\#007bff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 123 255 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#7F0021\] {
   --tw-bg-opacity: 1;
   background-color: rgb(127 0 33 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#888A8A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(136 138 138 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#D9D9D9\] {
@@ -3531,11 +3531,6 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#888A8A\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(136 138 138 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -3550,18 +3545,8 @@ details.collapse summary::-webkit-details-marker {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-zinc-400 {
-  --tw-gradient-from: #a1a1aa var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(161 161 170 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .to-primary {
   --tw-gradient-to: #13120C var(--tw-gradient-to-position);
-}
-
-.to-violet-600 {
-  --tw-gradient-to: #7c3aed var(--tw-gradient-to-position);
 }
 
 .object-cover {
@@ -3728,6 +3713,11 @@ details.collapse summary::-webkit-details-marker {
   line-height: 2.25rem;
 }
 
+.text-\[\#302F2A\] {
+  --tw-text-opacity: 1;
+  color: rgb(48 47 42 / var(--tw-text-opacity));
+}
+
 .text-\[\#AAAAAA\] {
   --tw-text-opacity: 1;
   color: rgb(170 170 170 / var(--tw-text-opacity));
@@ -3743,11 +3733,6 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-blue-800 {
-  --tw-text-opacity: 1;
-  color: rgb(30 64 175 / var(--tw-text-opacity));
-}
-
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(19 18 12 / var(--tw-text-opacity));
@@ -3761,11 +3746,6 @@ details.collapse summary::-webkit-details-marker {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#302F2A\] {
-  --tw-text-opacity: 1;
-  color: rgb(48 47 42 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
