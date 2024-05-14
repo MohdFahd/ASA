@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         primary: "#13120C",
         secondary: "#F0B624",
+        darkLight: "#373737",
       },
     },
     fontSize: {
