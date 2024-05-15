@@ -44,14 +44,158 @@
 
     <script src="./assets/js/alpine.js"></script>
     <style>
-      /* Style for fixed header */
-      .fixed-header {
-        position: fixed;
+      :root {
+        --duration: 2s;
+        --outer-delay: 0.2s;
+        --main-delay: 0.3s;
+        --ease: cubic-beizer(0.17, 0.67, 0.34, 0.99);
+        --image-size: 140vh;
+      }
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        transform-origin: center center;
+      }
+
+      .scene {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .slide {
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 1000; /* Adjust z-index as needed */
-        transition: background-color 0.3s ease;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .image {
+        width: 100%;
+        height: 180%;
+        position: absolute;
+        overflow: hidden;
+      }
+      .background,
+      .-clip {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+      .background::before {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: "";
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+      .-rounded {
+        border-radius: 100%;
+        overflow: hidden;
+      }
+      .-outer {
+        transform: scale(0.4);
+      }
+      .-outer .background {
+        transform: scale(2.5);
+      }
+      .-outer::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        content: "";
+        background: rgba(0, 0, 0, 0.3);
+      }
+      .-inner {
+        transform: scale(0.2);
+      }
+      .-inner .background {
+        transform: scale(5.05);
+      }
+      .scene .image .background::before {
+        animation-duration: var(--duration);
+        animation-delay: var(--main-delay);
+      }
+      .scene .image:nth-child(2) .background::before {
+        animation-delay: var(--outer-delay);
+      }
+      .scene .image:last-child .background::before {
+        animation-delay: 0s;
+      }
+      .slide:first-child .background::before {
+        background-image: url("./assets/imgs/hero.png");
+      }
+      .slide:nth-child(2) .background::before {
+        background-image: url("./assets/imgs/hero.png");
+      }
+      .slide:nth-child(3) .background::before {
+        background-image: url("./assets/imgs/hero.png");
+      }
+      .slide:nth-child(4) .background::before {
+        background-image: url("./assets/imgs/hero.png");
+      }
+      .slide {
+        transition: opacity var(--duration);
+      }
+      .slide[data-current="true"] {
+        opacity: 1;
+        --main-delay: 0.5s;
+      }
+      .slide[data-current="true"] .image .background::before {
+        animation-name: animate-in;
+      }
+      .slide:not([data-current="true"]) {
+        opacity: 0;
+      }
+      .slide:not([data-current="true"]) .image .background::before {
+        animation-name: animate-out;
+      }
+      @keyframes animate-out {
+        from {
+          transform: rotateZ(0deg) scale(1);
+        }
+        to {
+          transform: rotateZ(360deg) scale(5);
+        }
+      }
+      @keyframes animate-in {
+        from {
+          transform: rotateZ(0deg) scale(15);
+        }
+        to {
+          transform: rotateZ(360deg) scale(1);
+        }
+      }
+      .info {
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideIn 0.5s ease-out forwards;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .btns {
+        position: absolute;
+        z-index: 999;
+        bottom: 20px;
+        right: 20px;
       }
     </style>
   </head>
@@ -89,37 +233,24 @@
         </div>
       </nav>
     </header>
-
     <main class="">
-      <section
-        style="background-image: url('./assets/imgs/hero.png')"
-        class="bg-cover h-[90vh] text-white"
-      >
-        <div>
-          <div class="mx-12 h-[90vh] flex justify-between items-center">
-            <div class="flex items-center">
+      <section>
+        <div class="scene">
+          <div
+            class="absolute z-50 bottom-5 rounded-full bg-secondary btns w-14 h-14 p-3"
+          >
+            <img src="./assets/icons/undo.svg" alt="" />
+          </div>
+          <div
+            class="mx-12 h-[90vh] flex justify-between items-center line-slide z-50"
+          >
+            <div class="flex items-center text-white">
               <div class="flex flex-col justify-center items-center">
                 <span>01</span>
                 <ul class="bg-[#83868B] h-[360px] w-1 rounded-lg">
                   <li class="h-[90px] bg-white rounded-lg"></li>
                 </ul>
                 <span>04</span>
-              </div>
-              <div
-                class="max-w-md rounded-xl p-6 mx-5"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    rgba(65, 65, 65, 0.32) 0%,
-                    rgba(192, 191, 191, 0.32) 100%
-                  );
-                "
-              >
-                <h2 class="text-white text-xl font-bold mb-2">مجموعة السيفي</h2>
-                <p>
-                  لقد تحولت مجموعة السيفي إلى مجموعة رائدة في مبيعات قطع غيار
-                  الهواتف الذكية مسخرةً كل نشاطها وخبراتها
-                </p>
               </div>
             </div>
 
@@ -150,8 +281,54 @@
               </a>
             </div>
           </div>
+          <div class="slide" data-current="true">
+            <div
+              class="flex absolute z-50 flex-col text-center items-center justify-center info"
+            >
+              <h2 class="text-white text-3xl my-2 font-bold">مجموعة السيفي</h2>
+              <p class="text-white text-2xl w-[70%]">
+                لقد تحولت مجموعة السيفي إلى مجموعة رائدة في مبيعات قطع غيار
+                الهواتف الذكية مسخرةً كل نشاطها وخبراتها
+              </p>
+            </div>
+            <div class="image">
+              <div class="background"></div>
+            </div>
+            <div class="image">
+              <div class="-clip -rounded -outer">
+                <div class="background"></div>
+              </div>
+            </div>
+            <div class="image">
+              <div class="-clip -rounded -inner">
+                <div class="background"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div
+              class="flex absolute z-50 flex-col text-center items-center justify-center info"
+            >
+              <h2 class="text-white text-3xl my-2 font-bold">ثق بالخبرة.</h2>
+              <p class="text-white text-2xl">شاشات الهواتف الذكية الموثوقة</p>
+            </div>
+            <div class="image">
+              <div class="background"></div>
+            </div>
+            <div class="image">
+              <div class="-clip -rounded -outer">
+                <div class="background"></div>
+              </div>
+            </div>
+            <div class="image">
+              <div class="-clip -rounded -inner">
+                <div class="background"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
       <section class="">
         <div class="bg-[#F5F5F7]">
           <div
@@ -243,6 +420,14 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="p-5 flex justify-center items-center">
+        <iframe
+          class="w-[1156px] rounded-2xl h-[550px]"
+          src="https://www.youtube.com/embed/3hPoEmlBQdY"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </section>
     </main>
     <footer class="bg-primary relative">
@@ -419,6 +604,26 @@
           navbar.classList.remove("fixed-header");
         }
       });
+    </script>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+
+      slides.forEach((el, index) => {
+        el.dataset.index = index;
+      });
+
+      document.querySelector(".scene").addEventListener("click", () => {
+        const el = getCurrentSlide();
+        const index = parseInt(el.dataset.index);
+        el.dataset.current = false;
+
+        const nextSlideIndex = (index + 1) % slides.length;
+        slides[nextSlideIndex].dataset.current = true;
+      });
+
+      function getCurrentSlide() {
+        return document.querySelector('[data-current="true"]');
+      }
     </script>
   </body>
 </html>
