@@ -431,22 +431,40 @@ textarea:focus {
     transform: rotateZ(360deg) scale(1);
   }
 }
+
+.slide[data-current="true"] .info h2 {
+  animation: slideIn 1s ease-out forwards;
+}
+.slide[data-current="true"] .info p {
+  animation: slideOut 1s ease-out backwards;
+}
 /* .info {
         opacity: 0;
         transform: translateY(50px);
         animation: slideIn 0.5s ease-out forwards;
       } */
 
-/* @keyframes slideIn {
-        from {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      } */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-192);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 0;
+    transform: translateY(192px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .btns {
   position: absolute;
   z-index: 999;
