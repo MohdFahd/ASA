@@ -332,8 +332,6 @@ textarea:focus {
   justify-content: center;
 }
 .image {
-  width: 140vw;
-  height: 140vw;
   position: absolute;
   overflow: hidden;
 }
@@ -390,11 +388,11 @@ textarea:focus {
 .background::before {
   background-image: url("../imgs/hero.png");
 }
-.slide:nth-child(2) .background::before {
-  background-image: url("../imgs/11285.jpg");
+.slide:first-child .background::before {
+  background-image: url("../imgs/hero.png");
 }
 .slide:nth-child(3) .background::before {
-  background-image: url("../imgs/image1.png");
+  background-image: url("../imgs/hero.png");
 }
 .slide:nth-child(4) .background::before {
   background-image: url("../imgs/hero.png");
@@ -436,7 +434,7 @@ textarea:focus {
   animation: slideIn 1s ease-out forwards;
 }
 .slide[data-current="true"] .info p {
-  animation: slideOut 1s ease-out backwards;
+  animation: slideOut 1s ease-out forwards;
 }
 /* .info {
         opacity: 0;
@@ -474,7 +472,7 @@ textarea:focus {
 
 .section-snap {
   overflow-y: scroll;
-  height: 100vh;
+  /* height: 100vh; */
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;

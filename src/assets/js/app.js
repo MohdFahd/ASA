@@ -35,9 +35,55 @@ gsap.fromTo(
 // });
 gsap.fromTo(
   ".ASAIcone path",
-  { yoyo: true, repeat: -1, duration: 20, drawSVG: "0%" },
-  { drawSVG: "100%", duration: 20, yoyo: true, repeat: -1, repeatDelay: 0 }
+  { yoyo: true, repeat: -1, duration: 5, drawSVG: "0%" },
+  { drawSVG: "100%", duration: 5, yoyo: true, repeat: -1, repeatDelay: 0 }
 );
+
+// Wait for the DOM to be loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the card element
+  const card = document.querySelector(".card1");
+
+  // Add event listener for mouseenter (hover) event
+  card.addEventListener("mouseenter", function () {
+    // GSAP animation
+    gsap.fromTo(
+      ".card1 .icon path",
+      { yoyo: true, repeat: -1, duration: 4, drawSVG: "0%" },
+      { drawSVG: "100%", duration: 4, repeatDelay: 0 }
+    );
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the card element
+  const card = document.querySelector(".card2");
+
+  // Add event listener for mouseenter (hover) event
+  card.addEventListener("mouseenter", function () {
+    // GSAP animation
+    gsap.fromTo(
+      ".card2 .icon path",
+      { drawSVG: "0%" },
+      { drawSVG: "100%", duration: 0.5, repeatDelay: 0 }
+    );
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the card element
+  const card = document.querySelector(".card3");
+
+  // Add event listener for mouseenter (hover) event
+  card.addEventListener("mouseenter", function () {
+    // GSAP animation
+    gsap.fromTo(
+      ".card3 .icon path",
+      { yoyo: true, repeat: -1, duration: 0.5, drawSVG: "0%" },
+      { drawSVG: "100%", duration: 0.5, repeatDelay: 0 }
+    );
+  });
+});
+
+// // Add event listeners
 
 // gsap.to(".gsp-about", {
 //   y: 500,
