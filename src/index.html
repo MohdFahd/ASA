@@ -44,7 +44,7 @@
   </head>
 
   <body>
-    <header class="">
+    <header class="relative">
       <nav
         id="navbar"
         class="bg-primary z-50 w-full drop-shadow-md py-3 sticky max-md:hidden"
@@ -78,69 +78,19 @@
           </div>
         </div>
       </nav>
-      <nav class="md:hidden bg-primary">
+      <nav class="md:hidden bg-primary w-full z-50 sticky">
         <div class="flex justify-between p-5">
           <button>
-            <svg
-              fill="#ffffff"
-              height="30px"
-              width="30px"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 297 297"
-              xml:space="preserve"
-              stroke="#ffffff"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <g>
-                  <g>
-                    <g>
-                      <path
-                        d="M66.102,0H15.804C7.089,0,0,7.089,0,15.804v50.298c0,8.715,7.089,15.804,15.804,15.804h50.298 c8.715,0,15.804-7.089,15.804-15.804V15.804C81.907,7.089,74.817,0,66.102,0z"
-                      ></path>
-                      <path
-                        d="M173.649,0h-50.298c-8.715,0-15.804,7.089-15.804,15.804v50.298c0,8.715,7.089,15.804,15.804,15.804h50.298 c8.715,0,15.804-7.089,15.804-15.804V15.804C189.453,7.089,182.364,0,173.649,0z"
-                      ></path>
-                      <path
-                        d="M66.102,107.547H15.804C7.089,107.547,0,114.636,0,123.351v50.298c0,8.715,7.089,15.804,15.804,15.804h50.298 c8.715,0,15.804-7.089,15.804-15.804v-50.298C81.907,114.636,74.817,107.547,66.102,107.547z"
-                      ></path>
-                      <path
-                        d="M173.649,107.547h-50.298c-8.715,0-15.804,7.089-15.804,15.804v50.298c0,8.715,7.089,15.804,15.804,15.804h50.298 c8.715,0,15.804-7.089,15.804-15.804v-50.298C189.453,114.636,182.364,107.547,173.649,107.547z"
-                      ></path>
-                      <path
-                        d="M281.196,0h-50.298c-8.715,0-15.804,7.089-15.804,15.804v50.298c0,8.715,7.089,15.804,15.804,15.804h50.298 c8.715,0,15.804-7.089,15.804-15.804V15.804C297,7.089,289.911,0,281.196,0z"
-                      ></path>
-                      <path
-                        d="M281.196,107.547h-50.298c-8.715,0-15.804,7.089-15.804,15.804v50.298c0,8.715,7.089,15.804,15.804,15.804h50.298 c8.715,0,15.804-7.089,15.804-15.804v-50.298C297,114.636,289.911,107.547,281.196,107.547z"
-                      ></path>
-                      <path
-                        d="M66.102,215.093H15.804C7.089,215.093,0,222.183,0,230.898v50.298C0,289.911,7.089,297,15.804,297h50.298 c8.715,0,15.804-7.089,15.804-15.804v-50.298C81.907,222.183,74.817,215.093,66.102,215.093z"
-                      ></path>
-                      <path
-                        d="M173.649,215.093h-50.298c-8.715,0-15.804,7.089-15.804,15.804v50.298c0,8.715,7.089,15.804,15.804,15.804h50.298 c8.715,0,15.804-7.089,15.804-15.804v-50.298C189.453,222.183,182.364,215.093,173.649,215.093z"
-                      ></path>
-                      <path
-                        d="M281.196,215.093h-50.298c-8.715,0-15.804,7.089-15.804,15.804v50.298c0,8.715,7.089,15.804,15.804,15.804h50.298 c8.715,0,15.804-7.089,15.804-15.804v-50.298C297,222.183,289.911,215.093,281.196,215.093z"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </svg>
+            <img src="./assets/icons/menu.svg" alt="" />
           </button>
           <a href="index.html">
             <img src="./assets/imgs/logo.svg" class="w-16" alt="" />
           </a>
         </div>
       </nav>
+
+      <!-- mobile sidebar -->
+      <!-- <div class="absolute top-0 z-50 bg-primary w-full h-full">sdasdadas</div> -->
     </header>
     <main class="section-snap">
       <section class="section section-01">
@@ -151,7 +101,7 @@
             <img src="./assets/icons/undo.svg" alt="" />
           </div>
           <div
-            class="mx-12 h-[90vh] flex justify-between items-center line-slide z-50"
+            class="md:mx-12 max-md:mx-3 h-[90vh] flex justify-between items-center line-slide z-50"
           >
             <div
               class="flex items-center text-white gsp-line"
@@ -205,10 +155,14 @@
             <div
               class="flex absolute z-50 flex-col text-center items-center justify-center info"
             >
-              <h2 class="text-white text-3xl my-2 font-bold -translate-y-48">
+              <h2
+                class="text-white text-3xl my-2 font-bold -translate-y-48 max-md:text-lg"
+              >
                 مجموعة السيفي
               </h2>
-              <p class="text-white text-2xl w-[70%]">
+              <p
+                class="text-white text-2xl w-[70%] max-md:text-sm max-md:w-[90%]"
+              >
                 لقد تحولت مجموعة السيفي إلى مجموعة رائدة في مبيعات قطع غيار
                 الهواتف الذكية مسخرةً كل نشاطها وخبراتها
               </p>
@@ -831,7 +785,7 @@
         </div>
 
         <div
-          class="mx-12 flex flex-col text-center items-center justify-center md:h-screen"
+          class="mx-12 flex flex-col text-center items-center justify-center md:h-screen p-5"
         >
           <h2 class="text-3xl mb-3 font-bold">مميزاتنا</h2>
           <h3 class="text-2xl my-3 font-bold">لماذا يجب عليك اختيار ASA؟</h3>

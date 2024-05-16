@@ -35,8 +35,8 @@ gsap.fromTo(
 // });
 gsap.fromTo(
   ".ASAIcone path",
-  { yoyo: 1, repeat: -1, duration: 0, drawSVG: "0%" },
-  { drawSVG: "100%", duration: 2, yoyo: 7, repeat: -1, delay: 1 }
+  { yoyo: true, repeat: -1, duration: 20, drawSVG: "0%" },
+  { drawSVG: "100%", duration: 20, yoyo: true, repeat: -1, repeatDelay: 0 }
 );
 
 // gsap.to(".gsp-about", {

@@ -486,7 +486,13 @@ textarea:focus {
 body::-webkit-scrollbar {
   display: none;
 }
-
+@media not all and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+    height: 12px; /* height of the scrollbar */
+    display: none;
+  }
+}
 ::-webkit-scrollbar {
   width: 12px; /* width of the scrollbar */
   height: 12px; /* height of the scrollbar */
@@ -506,7 +512,7 @@ body::-webkit-scrollbar {
 /* Customize the scrollbar track */
 ::-webkit-scrollbar-track {
   background: #13120c; /* color of the scrollbar track */
-  border-radius: 10px; /* roundness of the scrollbar track */
+  /* border-radius: 10px;  */
 }
 
 /* Customize the scrollbar track when hovered */
