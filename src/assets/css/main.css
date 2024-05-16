@@ -386,17 +386,12 @@ textarea:focus {
   animation-delay: 0s;
 }
 .background::before {
-  background-image: url("../imgs/hero.png");
+  background-image: url("../imgs/hero.webp");
 }
 .slide:first-child .background::before {
-  background-image: url("../imgs/hero.png");
+  background-image: url("../imgs/hero.webp");
 }
-.slide:nth-child(3) .background::before {
-  background-image: url("../imgs/hero.png");
-}
-.slide:nth-child(4) .background::before {
-  background-image: url("../imgs/hero.png");
-}
+
 .slide {
   transition: opacity var(--duration);
 }
