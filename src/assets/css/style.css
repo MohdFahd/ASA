@@ -3354,13 +3354,13 @@ details.collapse summary::-webkit-details-marker {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-x-\[-10\%\] {
-  --tw-translate-x: -10%;
+.translate-x-\[-20\%\] {
+  --tw-translate-x: -20%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-x-\[-30\%\] {
-  --tw-translate-x: -30%;
+.translate-x-\[-5\%\] {
+  --tw-translate-x: -5%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3376,16 +3376,6 @@ details.collapse summary::-webkit-details-marker {
 
 .translate-y-\[-50\%\] {
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-\[-20\%\] {
-  --tw-translate-x: -20%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-\[-5\%\] {
-  --tw-translate-x: -5%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -4063,8 +4053,8 @@ details.collapse summary::-webkit-details-marker {
     margin-bottom: 0.5rem;
   }
 
-  .max-md\:mb-5 {
-    margin-bottom: 1.25rem;
+  .max-md\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .max-md\:mr-2 {
@@ -4081,10 +4071,6 @@ details.collapse summary::-webkit-details-marker {
 
   .max-md\:mt-5 {
     margin-top: 1.25rem;
-  }
-
-  .max-md\:mb-10 {
-    margin-bottom: 2.5rem;
   }
 
   .max-md\:flex {
