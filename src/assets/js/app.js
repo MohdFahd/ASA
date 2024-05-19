@@ -15,24 +15,7 @@ gsap.fromTo(
   { y: -100, opacity: 0 }, // Start from the left (y: -500) and with opacity 0
   { y: 0, opacity: 1, duration: 1.5 } // Move to the center (x: 0) and fade in with a duration of 1.5 seconds
 );
-// gsap.to(".-rounded", {
-//   rotation: 360, // Rotate 360 degrees
-//   duration: 60, // Animation duration
-//   ease: "none", // Linear easing for consistent speed
-//   repeat: -1, // Repeat indefinitely
-// });
-// gsap.utils.toArray(".card").forEach((card) => {
-//   gsap.from(card, {
-//     opacity: 0,
-//     y: 100,
-//     scrollTrigger: {
-//       trigger: card,
-//       start: "top bottom", // Adjust as needed
-//       end: "bottom top", // Adjust as needed
-//       scrub: true, // Smooth animation during scroll
-//     },
-//   });
-// });
+
 gsap.fromTo(
   ".ASAIcone path",
   { yoyo: true, repeat: -1, duration: 5, drawSVG: "0%" },
@@ -83,18 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// // Add event listeners
-
-// gsap.to(".gsp-about", {
-//   y: 500,
-//   duration: 3,
-//   scrollTrigger: {
-//     trigger: ".gsp-about",
-//     start: "top center",
-//     end: "bottom center",
-//     toggleActions: "play none none reverse",
-//   },
-// });
 gsap.fromTo(
   ".section-02 div",
   { x: -500 },
@@ -136,7 +107,6 @@ gsap.fromTo(
       scroller: ".section-snap",
       trigger: ".section-02",
       start: "bottom bottom",
-      markers: true,
       toggleActions: "play none none reset",
     },
   }

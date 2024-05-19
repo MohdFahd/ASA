@@ -125,7 +125,7 @@
 
           <!-- mobile sidebar -->
           <div
-            class="top-0 z-30 bg-primary w-full flex flex-col justify-center items-center text-white p-5 rounded-b-[30px]"
+            class="top-0 z-30 bg-primary w-full flex flex-col justify-center items-center text-white p-5 rounded-b-[30px] md:hidden"
             x-show="menu"
             @click.away="menu = false"
             x-transition:enter="transition ease-in-out duration-500"
@@ -146,9 +146,9 @@
           </div>
         </header>
         <div
-          class="absolute bottom-5 right-16 rounded-full bg-darkLight z-40 p-3 max-md:hidden"
+          class="absolute bottom-5 right-16 rounded-full bg-darkLight hover:bg-secondary z-50 p-3 max-md:hidden"
         >
-          <img src="./assets/icons/undo.svg" alt="" />
+          <img src="./assets/icons/undo.svg" class="" alt="" />
         </div>
         <div
           class="md:px-12 max-md:mx-3 h-[90vh] flex justify-between items-center line-slide z-50 max-md:flex-col"
@@ -279,7 +279,7 @@
         <div class="flex justify-center items-center flex-col mt-5">
           <h2 class="text-3xl my-3 font-bold">من نحن</h2>
           <p
-            class="text-2xl my-3 flex text-center md:w-3/5 max-md:w-full max-sm:text-lg anim-typewriter line-1"
+            class="text-2xl my-3 flex text-center md:w-3/5 max-md:w-full max-sm:text-lg"
           >
             تركز مجموعة السيفي على بيع وتصنيع قطع غيار الهواتف المحمولة بمختلف
             أشكالها وأنواعها. تعمل الشركة على توفير مجموعة واسعة من القطع
@@ -525,7 +525,9 @@
         </div>
         <div class="flex justify-center items-center flex-col mt-5 info">
           <h2 class="text-3xl mb-3 font-bold text-center">مميزاتنا</h2>
-          <h3 class="text-2xl my-3 font-bold text-center">
+          <h3
+            class="text-2xl my-3 font-bold text-center anim-typewriter line-1"
+          >
             لماذا يجب عليك اختيار ASA؟
           </h3>
           <p class="text-2xl my-3 md:w-[60vw] max-sm:text-lg text-center">

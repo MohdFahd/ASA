@@ -519,3 +519,34 @@ body::-webkit-scrollbar {
 #current-slide-indicator {
   transition: height 0.5s ease-in-out;
 }
+.line-1 {
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+
+/* Animation */
+.anim-typewriter {
+  width: 0;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16rem;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-left-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-left-color: transparent;
+  }
+}
