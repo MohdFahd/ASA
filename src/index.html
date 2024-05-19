@@ -46,98 +46,110 @@
   </head>
 
   <body>
-    <header class="relative" x-data="{ search: false,menu:false}">
-      <nav
-        id="navbar"
-        class="bg-primary z-50 w-full drop-shadow-md py-3 sticky max-md:hidden"
-      >
-        <div class="mx-12 gsp-header">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center">
+    <main class="section-snap scroll-smooth">
+      <section class="section h-screen section-01 absolute scene z-40">
+        <header class="relative z-50" x-data="{ search: false,menu:false}">
+          <nav id="navbar" class="bg-primary py-3 max-md:hidden">
+            <div class="mx-12 gsp-header">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <a href="index.html">
+                    <img src="./assets/imgs/logo.svg" alt="" />
+                  </a>
+                </div>
+                <div class="flex items-center text-white">
+                  <a href="index.html" class="mx-4 text-[20px]">الرئيسية</a>
+                  <a href="#aboutus" class="mx-4 text-[20px]">من نحن</a>
+                  <a href="#features" class="mx-4 text-[20px]">مميزاتنا</a>
+                  <a href="contactus.html" class="mx-4 text-[20px]"
+                    >تواصل معنا</a
+                  >
+                  <form action="" class="relative" method="">
+                    <input
+                      type="text"
+                      class="bg-darkLight min-w-[234px] px-3 rounded-3xl text-base h-[50px] focus:outline-none text-white"
+                      placeholder="البحث"
+                    />
+                    <button
+                      type="button"
+                      class="bg-darkLight rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1 cursor-pointer"
+                    >
+                      <img src="./assets/icons/search.svg" title="" alt="" />
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <nav class="md:hidden bg-primary w-full z-50 sticky">
+            <div class="flex justify-between p-4 flex-row-reverse items-center">
+              <div class="flex">
+                <form
+                  action=""
+                  class="relative overflow-hidden"
+                  method=""
+                  x-show="search"
+                  @click.away="search = false"
+                  x-transition:enter="transition ease-in-out duration-500"
+                  x-transition:enter-start="opacity-0  transform translate-x-[-20%]"
+                >
+                  <input
+                    type="text"
+                    class="bg-darkLight px-3 rounded-3xl text-base h-[40px] focus:outline-none text-white"
+                    placeholder="البحث"
+                  />
+                  <button
+                    type="button"
+                    class="bg-darkLight rounded-full absolute w-[30px] h-[30px] flex items-center justify-center left-0 top-0 mt-1 ml-1 cursor-pointer"
+                  >
+                    <img
+                      src="./assets/icons/search.svg"
+                      title=""
+                      class=""
+                      alt=""
+                    />
+                  </button>
+                </form>
+                <button class="" x-show="!search" @click="search = !search">
+                  <img src="./assets/icons/search.svg" alt="" />
+                </button>
+                <button class="mx-3" @click="menu = true">
+                  <img src="./assets/icons/menu.svg" alt="" />
+                </button>
+              </div>
               <a href="index.html">
-                <img src="./assets/imgs/logo.svg" alt="" />
+                <img src="./assets/imgs/logo.svg" class="w-14" alt="" />
               </a>
             </div>
-            <div class="flex items-center text-white">
-              <a href="index.html" class="mx-4 text-[20px]">الرئيسية</a>
-              <a href="#aboutus" class="mx-4 text-[20px]">من نحن</a>
-              <a href="#features" class="mx-4 text-[20px]">مميزاتنا</a>
-              <a href="contactus.html" class="mx-4 text-[20px]">تواصل معنا</a>
-              <form action="" class="relative" method="">
-                <input
-                  type="text"
-                  class="bg-darkLight min-w-[234px] px-3 rounded-3xl text-base h-[50px] focus:outline-none text-white"
-                  placeholder="البحث"
-                />
-                <button
-                  type="button"
-                  class="bg-darkLight rounded-full absolute w-[40px] h-[40px] flex items-center justify-center left-0 top-0 mt-1 ml-1 cursor-pointer"
-                >
-                  <img src="./assets/icons/search.svg" title="" alt="" />
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <nav class="md:hidden bg-primary w-full z-50 sticky">
-        <div class="flex justify-between p-4 flex-row-reverse items-center">
-          <div class="flex">
-            <form
-              action=""
-              class="relative overflow-hidden"
-              method=""
-              x-show="search"
-              @click.away="search = false"
-              x-transition:enter="transition ease-in-out duration-500"
-              x-transition:enter-start="opacity-0  transform translate-x-[-20%]"
+          </nav>
+
+          <!-- mobile sidebar -->
+          <div
+            class="top-0 z-30 bg-primary w-full flex flex-col justify-center items-center text-white p-5 rounded-b-[30px]"
+            x-show="menu"
+            @click.away="menu = false"
+            x-transition:enter="transition ease-in-out duration-500"
+            x-transition:enter-start="opacity-0  transform translate-y-[-500px]"
+          >
+            <a href="index.html" class="mx-4 text-[20px] my-3 text-secondary"
+              >الرئيسية</a
             >
-              <input
-                type="text"
-                class="bg-darkLight px-3 rounded-3xl text-base h-[40px] focus:outline-none text-white"
-                placeholder="البحث"
-              />
-              <button
-                type="button"
-                class="bg-darkLight rounded-full absolute w-[30px] h-[30px] flex items-center justify-center left-0 top-0 mt-1 ml-1 cursor-pointer"
-              >
-                <img src="./assets/icons/search.svg" title="" class="" alt="" />
-              </button>
-            </form>
-            <button class="" x-show="!search" @click="search = !search">
-              <img src="./assets/icons/search.svg" alt="" />
-            </button>
-            <button class="mx-3" @click="menu = true">
-              <img src="./assets/icons/menu.svg" alt="" />
+            <a href="#aboutus" class="mx-4 text-[20px] my-3">من نحن</a>
+            <a href="#features" class="mx-4 text-[20px] my-3">مميزاتنا</a>
+            <a href="contactus.html" class="mx-4 text-[20px] my-3"
+              >تواصل معنا</a
+            >
+
+            <button class="absolute top-5 left-4" @click="menu = false">
+              <img src="./assets/icons/close-light.svg" alt="" />
             </button>
           </div>
-          <a href="index.html">
-            <img src="./assets/imgs/logo.svg" class="w-14" alt="" />
-          </a>
-        </div>
-      </nav>
-
-      <!-- mobile sidebar -->
-      <div
-        class="absolute top-0 z-50 bg-primary w-full flex flex-col justify-center items-center text-white p-5"
-        x-show="menu"
-        x-transition:enter="transition ease-in-out duration-500"
-        x-transition:enter-start="opacity-0  transform translate-x-[-5%]"
-      >
-        <a href="index.html" class="mx-4 text-[20px] my-3 text-secondary"
-          >الرئيسية</a
+        </header>
+        <div
+          class="absolute bottom-5 right-16 rounded-full bg-darkLight z-40 p-3 max-md:hidden"
         >
-        <a href="#aboutus" class="mx-4 text-[20px] my-3">من نحن</a>
-        <a href="#features" class="mx-4 text-[20px] my-3">مميزاتنا</a>
-        <a href="contactus.html" class="mx-4 text-[20px] my-3">تواصل معنا</a>
-
-        <button class="absolute top-5 left-4" @click="menu = false">
-          <img src="./assets/icons/close.svg" alt="" />
-        </button>
-      </div>
-    </header>
-    <main class="section-snap scroll-smooth">
-      <section class="section section-01 scene z-40">
+          <img src="./assets/icons/undo.svg" alt="" />
+        </div>
         <div
           class="md:px-12 max-md:mx-3 h-[90vh] flex justify-between items-center line-slide z-50 max-md:flex-col"
         >
@@ -156,7 +168,7 @@
             </div>
           </div>
 
-          <div class="gsp-social max-md:flex max-md:mb-10">
+          <div class="gsp-social max-md:flex max-md:mb-5">
             <a href="">
               <img
                 src="./assets/icons/facebook-Light.svg"
@@ -261,7 +273,7 @@
       </section>
 
       <section
-        class="section section-02 bg-[#F5F5F7] text-center px-12 flex flex-col items-center gsp-about justify-between"
+        class="section lg:h-screen section-02 bg-[#F5F5F7] text-center px-12 flex flex-col items-center gsp-about md:justify-between max-md:justify-center overflow-hidden"
         id="aboutus"
       >
         <div class="flex justify-center items-center flex-col mt-5">
@@ -280,7 +292,7 @@
       </section>
       <!--  -->
       <section
-        class="bg-primary text-white flex justify-center items-center relative overflow-hidden section section-03 px-12 flex-col text-center p-5"
+        class="bg-primary text-white flex justify-center relative overflow-hidden section min-[1230px]:h-screen section-03 md:px-12 flex-col text-center p-5 w-full"
         id="features"
       >
         <div
@@ -511,15 +523,21 @@
             </g>
           </svg>
         </div>
-        <h2 class="text-3xl mb-3 font-bold">مميزاتنا</h2>
-        <h3 class="text-2xl my-3 font-bold">لماذا يجب عليك اختيار ASA؟</h3>
-        <p class="text-2xl my-3 flex text-center md:w-3/5 max-sm:text-lg">
-          نحن متخصصون في قطع غيار وصيانة لجميع الهواتف المحمولة والأجهزة اللوحية
-          وما إلى ذلك... في حين أن الأجزاء الأصلية المتوفرة في السوق إما غير
-          متوافقة أو غير متوفرة أو عندما يكون سعر قطع الغيار الأصلية باهظ الثمن،
-          فإننا نضمن توفير أفضل جودة أصلية
-        </p>
-        <div class="flex items-center justify-between my-10 flex-wrap z-10">
+        <div class="flex justify-center items-center flex-col mt-5 info">
+          <h2 class="text-3xl mb-3 font-bold text-center">مميزاتنا</h2>
+          <h3 class="text-2xl my-3 font-bold text-center">
+            لماذا يجب عليك اختيار ASA؟
+          </h3>
+          <p class="text-2xl my-3 md:w-[60vw] max-sm:text-lg text-center">
+            نحن متخصصون في قطع غيار وصيانة لجميع الهواتف المحمولة والأجهزة
+            اللوحية وما إلى ذلك... في حين أن الأجزاء الأصلية المتوفرة في السوق
+            إما غير متوافقة أو غير متوفرة أو عندما يكون سعر قطع الغيار الأصلية
+            باهظ الثمن، فإننا نضمن توفير أفضل جودة أصلية
+          </p>
+        </div>
+        <div
+          class="flex items-center justify-center my-10 flex-wrap z-10 w-full cards"
+        >
           <div
             class="rounded-xl relative w-[350px] h-[210px] flex justify-center items-center flex-col my-4 mx-3 ml card1 backdrop-blur-sm"
             style="
@@ -533,7 +551,7 @@
             <svg
               width="70"
               height="70"
-              class="absolute -top-8 left-[140px] icon"
+              class="absolute -top-8 left-[40%] icon"
               viewBox="0 0 70 70"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -579,7 +597,7 @@
             <svg
               width="70"
               height="70"
-              class="absolute -top-8 left-[140px] icon"
+              class="absolute -top-8 left-[40%] icon"
               viewBox="0 0 70 70"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -664,7 +682,7 @@
             <svg
               width="70"
               height="70"
-              class="absolute -top-8 left-[140px] icon"
+              class="absolute -top-8 left-[40%] icon"
               viewBox="0 0 70 70"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -799,7 +817,7 @@
           </div>
         </div>
       </section>
-      <section class="relative section section-04 h-[150vh]">
+      <section class="relative section section-04">
         <div
           class="p-5 flex justify-center items-center bg-white md:h-[80vh] max-md:h-[25vh] z-30"
         >
@@ -811,7 +829,7 @@
           ></iframe>
         </div>
 
-        <footer class="bg-primary relative">
+        <footer class="bg-primary relative h-full">
           <img
             src="./assets/icons/ASA.svg"
             class="absolute top-0 right-0 max-md:hidden"

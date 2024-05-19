@@ -475,7 +475,7 @@ textarea:focus {
 }
 
 .section {
-  height: 100vh;
+  /* height: 100vh; */
   scroll-snap-align: start;
   position: relative;
 }
@@ -518,15 +518,4 @@ body::-webkit-scrollbar {
 }
 #current-slide-indicator {
   transition: height 0.5s ease-in-out;
-}
-.line-1 {
-  width: 60%;
-
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
 }

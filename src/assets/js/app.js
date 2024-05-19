@@ -95,37 +95,94 @@ document.addEventListener("DOMContentLoaded", function () {
 //     toggleActions: "play none none reverse",
 //   },
 // });
-gsap.to(".section-02 h2", {
-  scrollTrigger: {
-    scroller: ".section-snap",
-    trigger: ".section-01",
-    start: "bottom ",
-    markers: true,
-    // onEnter OnLeeave OnEnterBack onLeaveBack
-    toggleActions: "play none none reset",
-    // scrub: true,
-  },
-  x: 500,
-  scale: 4,
-  duration: 4,
-  ease: "back",
-});
-var tl = new TimelineMax({
-  paused: true,
-});
-// letter animation
-tl.fromTo(
-  ".anim-typewriter",
-  8,
+gsap.fromTo(
+  ".section-02 div",
+  { x: -500 },
   {
-    width: "0",
-  },
-  {
-    width: "60%" /* same as CSS .line-1 width */,
-    ease: SteppedEase.config(37),
-  },
-  0
+    x: 0,
+    duration: 1.5,
+    ease: "power1.out",
+    scrollTrigger: {
+      scroller: ".section-snap",
+      trigger: ".section-01",
+      start: "bottom center",
+      toggleActions: "play none none reset",
+    },
+  }
 );
-// text cursor animation
+gsap.fromTo(
+  ".section-02 img",
+  { y: 500 },
+  {
+    y: 0,
+    duration: 1.5,
+    ease: "power1.out",
+    scrollTrigger: {
+      scroller: ".section-snap",
+      trigger: ".section-01",
+      start: "bottom center",
+      toggleActions: "play none none reset",
+    },
+  }
+);
+gsap.fromTo(
+  ".section-03 .info",
+  { y: -500 },
+  {
+    y: 0,
+    duration: 1.5,
+    ease: "power1.out",
+    scrollTrigger: {
+      scroller: ".section-snap",
+      trigger: ".section-02",
+      start: "bottom bottom",
+      markers: true,
+      toggleActions: "play none none reset",
+    },
+  }
+);
+// Create a GSAP timeline
+const tl = gsap.timeline({
+  scrollTrigger: {
+    // scrub: true,
+    scroller: ".section-snap", // Make sure this matches your scroller
+    trigger: ".section-02", // Element that triggers the animation
+    start: "bottom bottom",
+    toggleActions: "play none none reset",
+  },
+});
 
-tl.play();
+// Add animations to the timeline
+tl.fromTo(
+  ".card1",
+  { x: 500, y: -500, opacity: 0 },
+  { x: 0, y: 0, opacity: 1, duration: 1, ease: "power1.out" }
+)
+  .fromTo(
+    ".card2",
+    { x: 500, y: -500, opacity: 0 },
+    { x: 0, y: 0, opacity: 1, duration: 1, ease: "power1.out" },
+    "-=0.5" // Overlap the second animation by 0.5 seconds
+  )
+  .fromTo(
+    ".card3",
+    { x: 500, y: -500, opacity: 0 },
+    { x: 0, y: 0, opacity: 1, duration: 1, ease: "power1.out" },
+    "-=0.5" // Overlap the third animation by 0.5 seconds
+  );
+gsap.fromTo(
+  ".section-04 iframe",
+  { scale: 0.5 },
+  {
+    y: 0,
+    duration: 1.5,
+    ease: "power1.out",
+    scrollTrigger: {
+      scroller: ".section-snap",
+      trigger: ".section-03",
+      start: "bottom center",
+      toggleActions: "play none none reset",
+    },
+    scale: 1,
+  }
+);
