@@ -101,7 +101,8 @@ gsap.to(".section-02 h2", {
     trigger: ".section-01",
     start: "bottom ",
     markers: true,
-    toggleActions: "play complet0000e restart",
+    // onEnter OnLeeave OnEnterBack onLeaveBack
+    toggleActions: "play none none reset",
     // scrub: true,
   },
   x: 500,
@@ -109,3 +110,22 @@ gsap.to(".section-02 h2", {
   duration: 4,
   ease: "back",
 });
+var tl = new TimelineMax({
+  paused: true,
+});
+// letter animation
+tl.fromTo(
+  ".anim-typewriter",
+  8,
+  {
+    width: "0",
+  },
+  {
+    width: "60%" /* same as CSS .line-1 width */,
+    ease: SteppedEase.config(37),
+  },
+  0
+);
+// text cursor animation
+
+tl.play();

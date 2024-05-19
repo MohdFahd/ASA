@@ -301,7 +301,7 @@
     <main class="container mx-auto px-10 my-8">
       <!-- Contact Us -->
       <section class="my-5 flex justify-center">
-        <div class="flex flex-col bg-[#F9F9F9] rounded-2xl p-7 md:w-[50%]">
+        <div class="flex flex-col bg-[#F9F9F9] rounded-2xl p-7 md:w-[70%]">
           <p for="" class="text-primary w-full py-3">
             قم بتسجيل البيانات التالية حتى يصلك كل جديد
           </p>
@@ -354,8 +354,38 @@
                 required
               />
             </div>
+            <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+              <label for="" class="text-primary">اسم المحل </label>
+              <input
+                type="text"
+                class="rounded-lg py-2 mt-2 px-2 bg-white"
+                name=""
+                id=""
+                placeholder="السيفي ستور"
+                required
+              />
+            </div>
+            <div class="flex flex-col my-2 col-span-6 max-md:col-span-12">
+              <label for="" class="text-primary">المحافظة</label>
+              <select name="" class="rounded-lg py-2 mt-2 px-2 bg-white" id="">
+                <option value="">صنعاء</option>
+                <option value="">تعز</option>
+                <option value="">ريمة</option>
+              </select>
+            </div>
+            <div class="flex flex-col my-2 col-span-12 max-md:col-span-12">
+              <label for="" class="text-primary">العنوان</label>
+              <input
+                type="text"
+                class="rounded-lg py-2 mt-2 px-2 bg-white"
+                name=""
+                id=""
+                required
+                placeholder="صنعاء - شارع القصر - ركن السفاره الصينية "
+              />
+            </div>
             <button
-              class="btn bg-secondary text-[#FFFFFF] font-bold text-lg col-span-3 rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn overflow-hidden max-md:hover:text-primary"
+              class="btn bg-secondary text-[#FFFFFF] font-bold text-lg lg:col-span-3 md:col-span-4 rounded-2xl hover:bg-primary max-md:col-span-12 sendbtn overflow-hidden max-md:hover:text-primary"
             >
               <span>إرسال </span>
               <div class="svg-wrapper-1">

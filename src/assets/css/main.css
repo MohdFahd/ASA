@@ -285,6 +285,7 @@ textarea:focus {
 
 .sendbtn:hover span {
   transform: translateX(5em);
+  visibility: hidden;
 }
 
 .sendbtn:active {
@@ -517,4 +518,15 @@ body::-webkit-scrollbar {
 }
 #current-slide-indicator {
   transition: height 0.5s ease-in-out;
+}
+.line-1 {
+  width: 60%;
+
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 }
