@@ -47,7 +47,7 @@
 
   <body>
     <main class="section-snap scroll-smooth">
-      <section class="section h-screen section-01 absolute scene z-40">
+      <section class="section h-screen section-01 scene z-40">
         <header class="relative z-50" x-data="{ search: false,menu:false}">
           <nav id="navbar" class="bg-primary py-3 max-md:hidden">
             <div class="mx-12 gsp-header">
@@ -150,8 +150,9 @@
         >
           <img src="./assets/icons/undo.svg" class="" alt="" />
         </div>
+
         <div
-          class="md:px-12 max-md:mx-3 h-[90vh] flex justify-between items-center line-slide z-50 max-md:flex-col"
+          class="md:px-12 max-md:mx-3 h-screen flex justify-between items-center line-slide z-50 max-md:flex-col relative"
         >
           <div class="flex items-center text-white gsp-line">
             <div
@@ -168,7 +169,7 @@
             </div>
           </div>
 
-          <div class="gsp-social max-md:flex max-md:mb-5">
+          <div class="gsp-social max-md:hidden">
             <a href="">
               <img
                 src="./assets/icons/facebook-Light.svg"
@@ -199,6 +200,11 @@
             </a>
           </div>
         </div>
+        <!-- <div
+          class="md:px-12 h-screen flex justify-between items-center line-slide z-50"
+        >
+          <div id="mouse" class="w-36"></div>
+        </div> -->
         <div class="slide" data-current="true">
           <div
             class="flex absolute z-50 flex-col text-center items-center justify-center info"
@@ -821,23 +827,17 @@
       </section>
       <section class="relative section section-04">
         <div
-          class="p-5 flex justify-center items-center bg-white md:h-[80vh] max-md:h-[25vh] z-30"
+          class="p-5 flex justify-center items-center bg-white md:h-[70vh] max-md:h-[25vh] z-30"
         >
           <iframe
-            class="w-[80vw] rounded-2xl md:h-[80vh] max-md:h-[25vh] absolute -bottom-12 z-40"
+            class="w-[80vw] rounded-2xl md:h-[80vh] max-md:h-[25vh] absolute -bottom-32 z-40"
             src="https://www.youtube.com/embed/ISwq1YHQmtI"
             frameborder="0"
             allowfullscreen
           ></iframe>
         </div>
 
-        <footer class="bg-primary relative h-full">
-          <img
-            src="./assets/icons/ASA.svg"
-            class="absolute top-0 right-0 max-md:hidden"
-            alt=""
-          />
-
+        <footer class="bg-primary relative h-full pt-24">
           <div class="">
             <div
               class="flex flex-row md:justify-between max-[1023px]:justify-center max-[1023px]:flex-col max-[1023px]:items-center footer p-10 max-md:p-5 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
@@ -991,9 +991,9 @@
                   جميع الحقوق محفوظة &copy;
                   <span x-text="currentYear"></span> مجموعة السيفي
                 </div>
-                <div class="grid grid-flow-col gap-2 text-base max-sm:text-sm">
+                <!-- <div class="grid grid-flow-col gap-2 text-base max-sm:text-sm">
                   صمم بحب 💙 في بلاتفورم | Platform
-                </div>
+                </div> -->
               </nav>
               <nav
                 class="md:place-self-center md:justify-self-end max-sm:hidden"
@@ -1008,7 +1008,7 @@
       </section>
     </main>
 
-    <!-- <script src="./assets/js/aos.js"></script> -->
+    <script src="./assets/js/lottie.min.js"></script>
     <script src="./assets/js/mine.js"></script>
     <script src="./assets/js/gsap.min.js"></script>
     <script src="./assets/js/ScrollTrigger.min.js"></script>

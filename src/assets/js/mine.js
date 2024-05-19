@@ -55,6 +55,12 @@ var animation = bodymovin.loadAnimation({
   autoplay: true,
   path: "./assets/alerts/check.json", // Replace 'your-animation.json' with the path to your JSON file
 });
+var mouseanimaiont = bodymovin.loadAnimation({
+  container: document.getElementById("mouse"),
+  loop: true,
+  autoplay: true,
+  path: "./assets/alerts/mouse.json", // Replace 'your-animation.json' with the path to your JSON file
+});
 // For copying the data
 document.getElementById("copyIcon").addEventListener("click", function () {
   var contentToCopy = document.querySelector(".copy-info"); // Select the div to copy its content

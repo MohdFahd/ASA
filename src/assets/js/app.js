@@ -125,18 +125,18 @@ const tl = gsap.timeline({
 // Add animations to the timeline
 tl.fromTo(
   ".card1",
-  { x: 500, y: -500, opacity: 0 },
+  { y: 500, opacity: 0 },
   { x: 0, y: 0, opacity: 1, duration: 1, ease: "power1.out" }
 )
   .fromTo(
     ".card2",
-    { x: 500, y: -500, opacity: 0 },
+    { y: 500, opacity: 0 },
     { x: 0, y: 0, opacity: 1, duration: 1, ease: "power1.out" },
     "-=0.5" // Overlap the second animation by 0.5 seconds
   )
   .fromTo(
     ".card3",
-    { x: 500, y: -500, opacity: 0 },
+    { y: 500, opacity: 0 },
     { x: 0, y: 0, opacity: 1, duration: 1, ease: "power1.out" },
     "-=0.5" // Overlap the third animation by 0.5 seconds
   );
