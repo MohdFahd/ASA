@@ -95,3 +95,17 @@ document.addEventListener("DOMContentLoaded", function () {
 //     toggleActions: "play none none reverse",
 //   },
 // });
+gsap.to(".section-02 h2", {
+  scrollTrigger: {
+    scroller: ".section-snap",
+    trigger: ".section-01",
+    start: "bottom ",
+    markers: true,
+    toggleActions: "play complet0000e restart",
+    // scrub: true,
+  },
+  x: 500,
+  scale: 4,
+  duration: 4,
+  ease: "back",
+});

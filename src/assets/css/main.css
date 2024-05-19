@@ -465,7 +465,7 @@ textarea:focus {
   right: 20px;
 }
 
-/* .section-snap {
+.section-snap {
   overflow-y: scroll;
   height: 100vh;
   scroll-snap-type: mandatory;
@@ -477,7 +477,7 @@ textarea:focus {
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
-} */
+}
 
 body::-webkit-scrollbar {
   display: none;
