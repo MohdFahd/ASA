@@ -503,7 +503,7 @@ body::-webkit-scrollbar {
 
 /* Customize the scrollbar thumb when hovered */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* color of the scrollbar thumb when hovered */
+  background: #f0b624; /* color of the scrollbar thumb when hovered */
 }
 
 /* Customize the scrollbar track */
@@ -514,7 +514,7 @@ body::-webkit-scrollbar {
 
 /* Customize the scrollbar track when hovered */
 ::-webkit-scrollbar-track:hover {
-  background: #d1d1d1; /* color of the scrollbar track when hovered */
+  background: #13120c; /* color of the scrollbar track when hovered */
 }
 #current-slide-indicator {
   transition: height 0.5s ease-in-out;

@@ -3328,6 +3328,10 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .min-w-\[234px\] {
   min-width: 234px;
 }
@@ -4126,6 +4130,10 @@ details.collapse summary::-webkit-details-marker {
   }
 
   .max-md\:w-full {
+    width: 100%;
+  }
+
+  .max-md\:w-\[100\%\] {
     width: 100%;
   }
 
