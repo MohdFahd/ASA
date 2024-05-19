@@ -4109,6 +4109,10 @@ details.collapse summary::-webkit-details-marker {
     height: auto;
   }
 
+  .max-md\:h-\[100vh\] {
+    height: 100vh;
+  }
+
   .max-md\:w-\[100vh\] {
     width: 100vh;
   }
