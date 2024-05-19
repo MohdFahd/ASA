@@ -4290,6 +4290,18 @@ details.collapse summary::-webkit-details-marker {
     height: 80vh;
   }
 
+  .md\:h-\[120vw\] {
+    height: 120vw;
+  }
+
+  .md\:h-\[110vw\] {
+    height: 110vw;
+  }
+
+  .md\:h-\[100vw\] {
+    height: 100vw;
+  }
+
   .md\:w-3\/5 {
     width: 60%;
   }
@@ -4304,6 +4316,18 @@ details.collapse summary::-webkit-details-marker {
 
   .md\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .md\:w-\[120vw\] {
+    width: 120vw;
+  }
+
+  .md\:w-\[110vw\] {
+    width: 110vw;
+  }
+
+  .md\:w-\[100vw\] {
+    width: 100vw;
   }
 
   .md\:justify-end {
