@@ -529,16 +529,19 @@ body::-webkit-scrollbar {
 /* Animation */
 .anim-typewriter {
   width: 0;
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms steps(44) infinite normal;
+  animation: typewriter 10s steps(27) infinite normal both,
+    blinkTextCursor 500ms steps(60) infinite normal;
 }
 
 @keyframes typewriter {
-  from {
+  0% {
     width: 0;
   }
-  to {
+  50% {
     width: 16rem;
+  }
+  100% {
+    width: 0;
   }
 }
 
