@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // GSAP animation
     gsap.fromTo(
       ".card1 .icon path",
-      { yoyo: true, repeat: -1, duration: 4, drawSVG: "0%" },
-      { drawSVG: "100%", duration: 4, repeatDelay: 0 }
+      { drawSVG: "0%" },
+      { drawSVG: "100%", duration: 12, yoyo: true, repeat: -1 }
     );
   });
 });
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.fromTo(
       ".card2 .icon path",
       { drawSVG: "0%" },
-      { drawSVG: "100%", duration: 0.5, repeatDelay: 0 }
+      { drawSVG: "100%", duration: 3, repeatDelay: 0 }
     );
   });
 });
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // GSAP animation
     gsap.fromTo(
       ".card3 .icon path",
-      { yoyo: true, repeat: -1, duration: 0.5, drawSVG: "0%" },
-      { drawSVG: "100%", duration: 0.5, repeatDelay: 0 }
+      { drawSVG: "0%" },
+      { drawSVG: "100%", duration: 3, yoyo: true, repeat: -1 }
     );
   });
 });

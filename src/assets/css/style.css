@@ -2945,8 +2945,8 @@ details.collapse summary::-webkit-details-marker {
   position: sticky;
 }
 
-.-bottom-12 {
-  bottom: -3rem;
+.-bottom-32 {
+  bottom: -8rem;
 }
 
 .-top-8 {
@@ -2995,14 +2995,6 @@ details.collapse summary::-webkit-details-marker {
 
 .top-5 {
   top: 1.25rem;
-}
-
-.left-\[50\%\] {
-  left: 50%;
-}
-
-.-bottom-32 {
-  bottom: -8rem;
 }
 
 .-z-40 {
@@ -3272,6 +3264,18 @@ details.collapse summary::-webkit-details-marker {
   height: 100vh;
 }
 
+.h-\[90vh\] {
+  height: 90vh;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -3426,10 +3430,6 @@ details.collapse summary::-webkit-details-marker {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-col-reverse {
-  flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -4106,14 +4106,6 @@ details.collapse summary::-webkit-details-marker {
     height: auto;
   }
 
-  .max-md\:h-\[23vh\] {
-    height: 23vh;
-  }
-
-  .max-md\:h-\[20vh\] {
-    height: 20vh;
-  }
-
   .max-md\:w-\[100vh\] {
     width: 100vh;
   }
@@ -4287,12 +4279,12 @@ details.collapse summary::-webkit-details-marker {
     height: 100vw;
   }
 
-  .md\:h-\[80vh\] {
-    height: 80vh;
-  }
-
   .md\:h-\[70vh\] {
     height: 70vh;
+  }
+
+  .md\:h-\[80vh\] {
+    height: 80vh;
   }
 
   .md\:w-3\/5 {
