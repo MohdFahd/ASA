@@ -3332,6 +3332,14 @@ details.collapse summary::-webkit-details-marker {
   width: 100%;
 }
 
+.w-\[100vw\] {
+  width: 100vw;
+}
+
+.w-\[90vw\] {
+  width: 90vw;
+}
+
 .min-w-\[234px\] {
   min-width: 234px;
 }
@@ -4102,6 +4110,14 @@ details.collapse summary::-webkit-details-marker {
     height: auto;
   }
 
+  .max-md\:h-\[15vh\] {
+    height: 15vh;
+  }
+
+  .max-md\:h-\[10vh\] {
+    height: 10vh;
+  }
+
   .max-md\:w-\[100vh\] {
     width: 100vh;
   }
@@ -4112,6 +4128,10 @@ details.collapse summary::-webkit-details-marker {
 
   .max-md\:w-full {
     width: 100%;
+  }
+
+  .max-md\:w-\[90vw\] {
+    width: 90vw;
   }
 
   .max-md\:grid-cols-1 {
