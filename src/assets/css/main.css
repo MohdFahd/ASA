@@ -320,7 +320,7 @@ textarea:focus {
 .scene {
   overflow: hidden;
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .slide {
   position: absolute;
@@ -551,5 +551,19 @@ body::-webkit-scrollbar {
   }
   to {
     border-left-color: transparent;
+  }
+}
+
+/* Add a class for the rotation animation */
+.changeSlide {
+  animation: rotate 1.5s ease-in-out;
+}
+/* Define the rotation animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

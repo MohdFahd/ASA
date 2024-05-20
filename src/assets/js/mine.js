@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentSlideIndicator = document.getElementById(
     "current-slide-indicator"
   );
-  const totalHeight = 360; // Total height of the indicator track
+  const totalHeight = 50; // Total height of the indicator track
 
   // Initialize the total slides number
   totalSlidesSpan.textContent = String(slides.length).padStart(2, "0");
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Set the initial height of the indicator
   const indicatorHeight = totalHeight / slides.length;
-  currentSlideIndicator.style.height = `${indicatorHeight}px`;
+  currentSlideIndicator.style.height = `${indicatorHeight}vh`;
 
-  document.querySelector(".scene").addEventListener("click", () => {
+  document.querySelector(".changeSlide").addEventListener("click", () => {
     const currentSlide = getCurrentSlide();
     const currentIndex = parseInt(currentSlide.dataset.index);
     currentSlide.dataset.current = "false";
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update the height of the current slide indicator
     currentSlideIndicator.style.height = `${
       indicatorHeight * (nextSlideIndex + 1)
-    }px`;
+    }vh`;
   });
 
   function getCurrentSlide() {

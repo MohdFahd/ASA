@@ -47,8 +47,11 @@
 
   <body>
     <main class="section-snap scroll-smooth">
-      <section class="section h-screen section-01 scene z-40">
-        <header class="relative z-50" x-data="{ search: false,menu:false}">
+      <section
+        class="section h-screen section-01 scene z-40"
+        x-data="{ search: false,menu:false,rotate:false }"
+      >
+        <header class="relative z-50">
           <nav id="navbar" class="bg-primary py-3 max-md:hidden">
             <div class="mx-12 gsp-header">
               <div class="flex items-center justify-between">
@@ -145,77 +148,87 @@
             </button>
           </div>
         </header>
-        <div
-          class="absolute bottom-5 right-16 rounded-full bg-darkLight hover:bg-secondary z-50 p-3 max-md:hidden"
-        >
-          <img src="./assets/icons/undo.svg" class="" alt="" />
-        </div>
 
         <div
-          class="md:px-12 max-md:mx-3 h-[90vh] flex justify-between items-center line-slide z-50 max-md:flex-col"
+          class="relative w-full z-50 flex justify-between flex-col h-[90vh] text-center"
         >
-          <div class="flex items-center text-white gsp-line">
-            <div
-              class="flex flex-col justify-center items-center max-md:hidden"
-            >
-              <span id="current-slide">01</span>
-              <ul class="bg-[#83868B] h-[360px] w-1 rounded-lg">
-                <li
-                  id="current-slide-indicator"
-                  class="bg-white rounded-lg"
-                ></li>
-              </ul>
-              <span id="total-slides">04</span>
+          <div></div>
+          <div
+            class="md:px-12 max-md:mx-3 flex justify-between items-center line-slide z-50 max-md:flex-col relative"
+          >
+            <div class="flex items-center text-white gsp-line">
+              <div
+                class="flex flex-col justify-center items-center max-md:hidden"
+              >
+                <span id="current-slide">01</span>
+                <ul class="bg-[#83868B] h-[50vh] w-1 rounded-lg">
+                  <li
+                    id="current-slide-indicator"
+                    class="bg-white rounded-lg"
+                  ></li>
+                </ul>
+                <span id="total-slides">04</span>
+              </div>
+            </div>
+
+            <div class="gsp-social max-md:hidden">
+              <a href="https://www.facebook.com/ALSaifiasa">
+                <img
+                  src="./assets/icons/facebook-Light.svg"
+                  class="my-4 max-md:mx-4"
+                  alt=""
+                />
+              </a>
+              <a href="">
+                <img
+                  src="./assets/icons/insta-light.svg"
+                  class="my-4 max-md:mx-4"
+                  alt=""
+                />
+              </a>
+              <a href="https://twitter.com/alsaifiasa">
+                <img
+                  src="./assets/icons/twitter-light.svg"
+                  class="my-4 max-md:mx-4"
+                  alt=""
+                />
+              </a>
+              <a href="https://www.youtube.com/@user-ig7gs5py4x">
+                <img
+                  src="./assets/icons/youtube-Light.svg"
+                  class="my-4 max-md:mx-4"
+                  alt=""
+                />
+              </a>
             </div>
           </div>
-
-          <div class="gsp-social max-md:hidden">
-            <a href="https://www.facebook.com/ALSaifiasa">
-              <img
-                src="./assets/icons/facebook-Light.svg"
-                class="my-4 max-md:mx-4"
-                alt=""
-              />
-            </a>
-            <a href="">
-              <img
-                src="./assets/icons/insta-light.svg"
-                class="my-4 max-md:mx-4"
-                alt=""
-              />
-            </a>
-            <a href="https://twitter.com/alsaifiasa">
-              <img
-                src="./assets/icons/twitter-light.svg"
-                class="my-4 max-md:mx-4"
-                alt=""
-              />
-            </a>
-            <a href="https://www.youtube.com/@user-ig7gs5py4x">
-              <img
-                src="./assets/icons/youtube-Light.svg"
-                class="my-4 max-md:mx-4"
-                alt=""
-              />
-            </a>
+          <div class="w-full z-50 flex justify-center">
+            <a href="#aboutus" id="mouse" class="w-36"></a>
+          </div>
+          <div
+            class="bottom-5 md:right-16 max-md:right-6 rounded-full bg-darkLight hover:bg-secondary z-50 p-3 cursor-pointer changeSlide absolute"
+            @click="rotate = true; setTimeout(() => rotate = false, 1600)"
+          >
+            <img
+              src="./assets/icons/undo.svg"
+              id="changeSlide"
+              :class="{ 'changeSlide': rotate}"
+              alt=""
+            />
           </div>
         </div>
-        <!-- <div
-          class="md:px-12 h-screen flex justify-between items-center line-slide z-50"
-        >
-          <div id="mouse" class="w-36"></div>
-        </div> -->
+
         <div class="slide" data-current="true">
           <div
             class="flex absolute z-50 flex-col text-center items-center justify-center info"
           >
             <h2
-              class="text-white text-3xl opacity-0 my-2 font-bold -translate-y-48 max-md:text-lg"
+              class="text-white text-3xl opacity-0 my-2 font-bold -translate-y-48 max-md:text-2xl"
             >
               مجموعة السيفي
             </h2>
             <p
-              class="text-white text-2xl opacity-0 w-[70%] max-md:text-sm max-md:w-[90%]"
+              class="text-white text-2xl opacity-0 w-[70%] max-md:text-lg max-md:w-[90%]"
             >
               لقد تحولت مجموعة السيفي إلى مجموعة رائدة في مبيعات قطع غيار
               الهواتف الذكية مسخرةً كل نشاطها وخبراتها
@@ -246,12 +259,12 @@
             class="flex absolute z-50 flex-col text-center items-center justify-center info"
           >
             <h2
-              class="text-white text-3xl opacity-0 my-2 font-bold -translate-y-48 max-md:text-lg"
+              class="text-white text-3xl opacity-0 my-2 font-bold -translate-y-48 max-md:text-2xl"
             >
               ثق بالخبرة.
             </h2>
             <p
-              class="text-white text-2xl opacity-0 w-[80%] max-md:text-sm max-md:w-[90%]"
+              class="text-white text-2xl opacity-0 w-[80%] max-md:text-lg max-md:w-[90%]"
             >
               شاشات الهواتف الذكية الموثوقة
             </p>
@@ -529,7 +542,7 @@
             </g>
           </svg>
         </div>
-        <div class="flex justify-center items-center flex-col mt-5 info">
+        <div class="flex justify-center items-center flex-col mt-10 info">
           <h2 class="text-3xl mb-3 font-bold text-center">مميزاتنا</h2>
           <h3
             class="text-2xl my-3 font-bold text-center anim-typewriter line-1"
