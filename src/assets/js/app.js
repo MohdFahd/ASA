@@ -18,8 +18,8 @@ gsap.fromTo(
 
 gsap.fromTo(
   ".ASAIcone path",
-  { yoyo: true, repeat: -1, duration: 5, drawSVG: "0%" },
-  { drawSVG: "100%", duration: 5, yoyo: true, repeat: -1, repeatDelay: 0 }
+  { drawSVG: "0%" },
+  { drawSVG: "100%", duration: 15, yoyo: true, repeat: -1 }
 );
 
 // Wait for the DOM to be loaded
@@ -113,8 +113,8 @@ gsap.fromTo(
 );
 // Create a GSAP timeline
 const tl = gsap.timeline({
+  scrub: true,
   scrollTrigger: {
-    // scrub: true,
     scroller: ".section-snap", // Make sure this matches your scroller
     trigger: ".section-02", // Element that triggers the animation
     start: "bottom bottom",

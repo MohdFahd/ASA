@@ -387,9 +387,10 @@ textarea:focus {
   animation-delay: 0s;
 }
 .background::before {
-  background-image: url("../imgs/hero.webp");
+  background-image: url("../imgs/boxes.webp");
 }
-.slide:first-child .background::before {
+
+.slide:nth-child(3) .background::before {
   background-image: url("../imgs/hero.webp");
 }
 

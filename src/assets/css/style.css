@@ -4287,6 +4287,14 @@ details.collapse summary::-webkit-details-marker {
     height: 80vh;
   }
 
+  .md\:h-\[80vw\] {
+    height: 80vw;
+  }
+
+  .md\:h-\[50vw\] {
+    height: 50vw;
+  }
+
   .md\:w-3\/5 {
     width: 60%;
   }
@@ -4301,6 +4309,14 @@ details.collapse summary::-webkit-details-marker {
 
   .md\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .md\:w-\[80vw\] {
+    width: 80vw;
+  }
+
+  .md\:w-\[50vw\] {
+    width: 50vw;
   }
 
   .md\:justify-end {
