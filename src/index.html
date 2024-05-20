@@ -294,11 +294,13 @@
               </a>
             </div>
           </div>
-          <div class="w-full z-50 flex justify-center">
+          <div
+            class="w-full z-50 flex justify-center items-start md:mb-10 max-md:mb-5"
+          >
             <a href="#aboutus" id="mouse" class="w-36"></a>
           </div>
           <div
-            class="bottom-5 md:right-16 max-md:right-6 rounded-full bg-darkLight hover:bg-secondary z-50 p-3 cursor-pointer changeSlide absolute changeSlideglow"
+            class="bottom-5 md:right-12 max-md:right-6 rounded-full bg-darkLight hover:bg-secondary z-50 p-3 cursor-pointer changeSlide absolute changeSlideglow md:mb-10 max-md:mb-5"
             id="glow"
             @click="rotate = true; setTimeout(() => rotate = false, 1600)"
           >
@@ -841,7 +843,7 @@
           class="p-5 flex justify-center items-center bg-white md:h-[70vh] max-md:h-[15vh] z-30"
         >
           <iframe
-            class="w-[80vw] max-md:w-[90vw] rounded-2xl md:h-[80vh] max-md:h-[25vh] absolute -bottom-32 z-40"
+            class="w-[80vw] max-md:w-[90vw] rounded-2xl md:h-[80vh] max-md:h-[25vh] absolute top-8 z-40"
             src="https://www.youtube.com/embed/ISwq1YHQmtI"
             frameborder="0"
             allowfullscreen

@@ -2945,10 +2945,6 @@ details.collapse summary::-webkit-details-marker {
   position: sticky;
 }
 
-.-bottom-32 {
-  bottom: -8rem;
-}
-
 .-left-52 {
   left: -13rem;
 }
@@ -2959,6 +2955,10 @@ details.collapse summary::-webkit-details-marker {
 
 .bottom-5 {
   bottom: 1.25rem;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
 }
 
 .left-0 {
@@ -2995,6 +2995,18 @@ details.collapse summary::-webkit-details-marker {
 
 .top-5 {
   top: 1.25rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-7 {
+  top: 1.75rem;
+}
+
+.top-8 {
+  top: 2rem;
 }
 
 .-z-40 {
@@ -3126,6 +3138,10 @@ details.collapse summary::-webkit-details-marker {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-2 {
@@ -3751,6 +3767,10 @@ details.collapse summary::-webkit-details-marker {
   padding-bottom: 1.25rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pt-24 {
   padding-top: 6rem;
 }
@@ -3873,6 +3893,11 @@ details.collapse summary::-webkit-details-marker {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .drop-shadow-md {
@@ -4082,6 +4107,10 @@ details.collapse summary::-webkit-details-marker {
     margin-top: 1.25rem;
   }
 
+  .max-md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .max-md\:hidden {
     display: none;
   }
@@ -4254,8 +4283,8 @@ details.collapse summary::-webkit-details-marker {
     right: -16rem;
   }
 
-  .md\:right-16 {
-    right: 4rem;
+  .md\:right-12 {
+    right: 3rem;
   }
 
   .md\:top-20 {
@@ -4273,6 +4302,10 @@ details.collapse summary::-webkit-details-marker {
 
   .md\:mt-5 {
     margin-top: 1.25rem;
+  }
+
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .md\:flex {
