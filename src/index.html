@@ -51,6 +51,20 @@
           document.getElementById("loading-cover").style.display = "none";
         }, 1000); // 1000 milliseconds = 1 second
       });
+
+      function loadVideo() {
+        const container = document.querySelector(".video-container");
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute(
+          "class",
+          "w-[80vw] max-md:w-[90vw] rounded-2xl md:h-[80vh] max-md:h-[25vh] absolute top-8 z-40"
+        );
+        iframe.setAttribute("src", "https://www.youtube.com/embed/ISwq1YHQmtI");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        container.innerHTML = "";
+        container.appendChild(iframe);
+      }
     </script>
   </head>
 
@@ -842,12 +856,10 @@
         <div
           class="p-5 flex justify-center items-center bg-white md:h-[70vh] max-md:h-[15vh] z-30"
         >
-          <iframe
+          <lite-youtube
+            videoid="ISwq1YHQmtI"
             class="w-[80vw] max-md:w-[90vw] rounded-2xl md:h-[80vh] max-md:h-[25vh] absolute top-8 z-40"
-            src="https://www.youtube.com/embed/ISwq1YHQmtI"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+          ></lite-youtube>
         </div>
 
         <footer class="bg-primary relative h-full pt-24 overflow-hidden">
@@ -1040,6 +1052,7 @@
       </section>
     </main>
 
+    <script src="./assets/js/lite-yt-embed.js"></script>
     <script src="./assets/js/lottie.min.js"></script>
     <script src="./assets/js/mine.js"></script>
     <script src="./assets/js/gsap.min.js"></script>

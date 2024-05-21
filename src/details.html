@@ -46,7 +46,10 @@
   </head>
 
   <body class="bg-[#FEFEFE]" x-data="{showVideo:false,copy: 'نسخ' }">
-    <header class="relative z-50">
+    <header
+      class="relative z-50"
+      x-data="{ search: false,menu:false,rotate:false }"
+    >
       <nav id="navbar" class="bg-primary py-3 max-md:hidden drop-shadow-lg">
         <div class="mx-12 gsp-header">
           <div class="flex items-center justify-between">
@@ -480,17 +483,21 @@
         <div class="relative">
           <img
             src="./assets/icons/close.svg"
-            class="absolute top-0 right-0 bg-white rounded-full cursor-pointer"
+            class="absolute top-0 right-0 bg-white rounded-full cursor-pointer z-30"
             @click="showVideo = false"
             alt=""
           />
         </div>
-        <iframe
+        <lite-youtube
+          videoid="3hPoEmlBQdY"
+          class="w-full rounded-3xl h-[500px] max-md:h-[200px]"
+        ></lite-youtube>
+        <!-- <iframe
           class="w-full rounded-3xl h-[500px] max-md:h-[200px]"
           src="https://www.youtube.com/embed/3hPoEmlBQdY"
           frameborder="0"
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
       </section>
 
       <div class="flex my-5 justify-center flex-row items-center">
@@ -581,15 +588,18 @@
         </div>
       </section>
     </main>
-
-    <footer class="bg-primary relative">
+    <footer class="bg-primary relative h-full pt-24 overflow-hidden">
       <img
-        src="./assets/icons/ASA.svg"
-        class="absolute top-0 right-0 max-md:hidden"
+        src="./assets/icons/electronics.svg"
+        class="absolute top-0 -left-52"
         alt=""
       />
-
-      <div class="container">
+      <img
+        src="./assets/icons/electronics.svg"
+        class="absolute top-0 rihgt-52 rotate-180"
+        alt=""
+      />
+      <div class="">
         <div
           class="flex flex-row md:justify-between max-[1023px]:justify-center max-[1023px]:flex-col max-[1023px]:items-center footer p-10 max-md:p-5 bg-base-200 mt-10 drop-shadow-md bg-transparent text-white"
         >
@@ -647,7 +657,10 @@
                   title=""
                   alt=""
                 />
-                <a href="" class="cursor-pointer mx-2">
+                <a
+                  href="https://www.facebook.com/ALSaifiasa"
+                  class="cursor-pointer mx-2"
+                >
                   <img
                     src="./assets/icons/facebook.svg"
                     aria-label="facebook account"
@@ -663,7 +676,10 @@
                     alt=""
                   />
                 </a>
-                <a href="" class="cursor-pointer mx-2">
+                <a
+                  href="https://twitter.com/alsaifiasa"
+                  class="cursor-pointer mx-2"
+                >
                   <img
                     src="./assets/icons/x.svg"
                     aria-label="x account"
@@ -671,7 +687,10 @@
                     alt=""
                   />
                 </a>
-                <a href="" class="cursor-pointer mx-2">
+                <a
+                  href="https://www.youtube.com/@user-ig7gs5py4x"
+                  class="cursor-pointer mx-2"
+                >
                   <img
                     src="./assets/icons/youtube.svg"
                     aria-label="youtube account"
@@ -736,9 +755,9 @@
               جميع الحقوق محفوظة &copy;
               <span x-text="currentYear"></span> مجموعة السيفي
             </div>
-            <div class="grid grid-flow-col gap-2 text-base max-sm:text-sm">
-              صمم بحب 💙 في بلاتفورم | Platform
-            </div>
+            <!-- <div class="grid grid-flow-col gap-2 text-base max-sm:text-sm">
+                  صمم بحب 💙 في بلاتفورم | Platform
+                </div> -->
           </nav>
           <nav class="md:place-self-center md:justify-self-end max-sm:hidden">
             <div class="grid grid-flow-col gap-4 text-base">سياسة الخصوصية</div>
@@ -748,6 +767,8 @@
     </footer>
 
     <!-- Script -->
+    <script src="./assets/js/lite-yt-embed.js"></script>
+
     <script src="./assets/js/lottie.min.js"></script>
     <script src="./assets/js/mine.js"></script>
   </body>
