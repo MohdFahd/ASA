@@ -391,13 +391,21 @@
                     />
                   </div>
                 </form>
-                <button
-                  class="btn flex bg-primary text-[#FFFFFF] col-span-5 px-10 lg:px-16 font-bold text-lg rounded-2xl hover:bg-primary max-md:col-span-12 mx-3"
-                  @click="showForm = false;showNotification = true; setTimeout(() => showNotification = false, 2000)"
-                >
-                  طلب
-                  <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
-                </button>
+                <div class="flex justify-start">
+                  <button
+                    class="btn flex bg-primary text-[#FFFFFF] col-span-5 px-10 lg:px-16 font-bold text-lg rounded-2xl hover:bg-primary"
+                    @click="showForm = false;showNotification = true; setTimeout(() => showNotification = false, 2000)"
+                  >
+                    طلب
+                    <img src="./assets/icons/cart.svg" class="mx-2" alt="" />
+                  </button>
+                  <button
+                    class="btn flex text-primary col-span-4 px-10 lg:px-16 font-bold text-lg rounded-2xl mx-3"
+                    @click="showForm = false"
+                  >
+                    اغلاق
+                  </button>
+                </div>
               </div>
               <form
                 method="dialog"
@@ -415,10 +423,29 @@
               <div
                 class="modal-box flex flex-col justify-center items-center text-center"
               >
-                <div>
-                  <div id="lottie-container" class="w-36"></div>
+                <div class="success-animation">
+                  <svg
+                    class="checkmark"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 52 52"
+                  >
+                    <circle
+                      :class="{ 'checkmark__circle': showNotification }"
+                      cx="26"
+                      cy="26"
+                      r="25"
+                      fill="none"
+                    />
+                    <path
+                      :class="{ 'checkmark__check': showNotification }"
+                      fill="none"
+                      d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                    />
+                  </svg>
                 </div>
-                <h3 class="font-bold text-xl text-center">
+                <!-- <div id="lottie-container" class="w-36"></div> -->
+
+                <h3 class="font-bold text-xl text-center mt-5">
                   تمت العلمية بنجاح ، شكرا !
                 </h3>
               </div>
@@ -768,8 +795,6 @@
 
     <!-- Script -->
     <script src="./assets/js/lite-yt-embed.js"></script>
-
-    <script src="./assets/js/lottie.min.js"></script>
     <script src="./assets/js/mine.js"></script>
   </body>
 </html>
